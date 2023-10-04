@@ -1,10 +1,10 @@
 {
-  "Name": "Rejuvenating Forest",
-  "Author": "Team Timber",
+  "Name": "Stendew Valley",
+  "Author": "Haunted Pineapple",
   "Version": "1.0.0",
   "Description": "<description goes here>",
-  "UniqueID": "TeamTimber.RejuvenatingForest",
-  "EntryDll": "RejuvenatingForest.dll",
+  "UniqueID": "HauntedPineapple.StendewValley",
+  "EntryDll": "StendewValley.dll",
   "MinimumApiVersion": "3.0.0",
-  "UpdateKeys": [ "Nexus:10322" ]
+  "UpdateKeys": [ "Nexus:???" ]
 }

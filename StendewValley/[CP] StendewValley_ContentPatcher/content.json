@@ -1,0 +1,29 @@
+{
+  "Format": "1.23.0",
+
+  "CustomLocations": [
+    {
+      "Name": "Custom_MainIsland",
+      "FromMapFile": "MapAssets/MainIsland.tmx"
+    }
+  ],
+
+  "Changes": [
+    /* MAPS */
+    {
+      "Action": "EditMap",
+      "Target": "MapAssets/MainIsland.tmx",
+      "AddWarps": [
+        "58 61 Custom_MainIsland 41 25",
+        "59 61 Custom_MainIsland 41 25",
+      ]
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Beach",
+      "MapProperties": {
+        "NPCWarp": "83 39 Custom_MainIsland 29 72"
+      }
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "Name": "---",
+  "Author": "---",
+  "Version": "1.0.0",
+  "Description": "---",
+  "UniqueID": "HauntedPineapple.StendewValley_ContentPatcher",
+  "ContentPackFor": {
+    "UniqueID": "Pathoschild.ContentPatcher"
+  },
+  "Dependencies": [
+  
+  ],
+  "UpdateKeys": [ "Nexus:???" ]
+}
