@@ -3,11 +3,13 @@
  <properties>
   <property name="Music" value="ocean"/>
   <property name="Outdoors" value="T"/>
+  <property name="Warp" value="29 73 Beach 84 39 58 62 Custom_MainIsland 41 26 59 62 Custom_MainIsland 41 26 41 25 Custom_MainIsland 58 63"/>
  </properties>
  <tileset firstgid="1" source="IslandTilesheet1.tsx"/>
  <tileset firstgid="2081" source="IslandTilesheet2.tsx"/>
  <tileset firstgid="2337" source="SummerOutdoorStylesheet.tsx"/>
  <tileset firstgid="4312" source="SpringIslandTileSheet1.tsx"/>
+ <tileset firstgid="5592" source="../../../../../../../../Users/anaso/Documents/GitHub/Stendew-Valley/StendewValley/[CP] StendewValley_ContentPatcher/MapAssets/Paths.tsx"/>
  <layer id="1" name="Back" width="100" height="100">
   <data encoding="csv">
 200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,
