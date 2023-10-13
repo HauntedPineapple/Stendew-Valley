@@ -9,7 +9,6 @@
  <tileset firstgid="2081" source="IslandTilesheet2.tsx"/>
  <tileset firstgid="2337" source="SummerOutdoorStylesheet.tsx"/>
  <tileset firstgid="4312" source="SpringIslandTileSheet1.tsx"/>
- <tileset firstgid="5592" source="../../../../../../../../Users/anaso/Documents/GitHub/Stendew-Valley/StendewValley/[CP] StendewValley_ContentPatcher/MapAssets/Paths.tsx"/>
  <layer id="1" name="Back" width="100" height="100">
   <data encoding="csv">
 200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,200,
