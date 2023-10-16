@@ -721,4 +721,92 @@
    <property name="Type" value="Grass"/>
   </properties>
  </tile>
+ <tile id="1228">
+  <properties>
+   <property name="Water" value="T"/>
+  </properties>
+ </tile>
+ <tile id="1229">
+  <properties>
+   <property name="Water" value="T"/>
+  </properties>
+ </tile>
+ <tile id="1230">
+  <properties>
+   <property name="Water" value="T"/>
+  </properties>
+ </tile>
+ <tile id="1231">
+  <properties>
+   <property name="Water" value="T"/>
+  </properties>
+ </tile>
+ <tile id="1253">
+  <properties>
+   <property name="Water" value="T"/>
+  </properties>
+ </tile>
+ <tile id="1254">
+  <properties>
+   <property name="Water" value="T"/>
+  </properties>
+ </tile>
+ <tile id="1255">
+  <properties>
+   <property name="Water" value="T"/>
+  </properties>
+ </tile>
+ <tile id="1256">
+  <properties>
+   <property name="Water" value="T"/>
+  </properties>
+ </tile>
+ <tile id="1278">
+  <properties>
+   <property name="Water" value="T"/>
+  </properties>
+ </tile>
+ <tile id="1279">
+  <properties>
+   <property name="Water" value="T"/>
+  </properties>
+ </tile>
+ <tile id="1280">
+  <properties>
+   <property name="Water" value="T"/>
+  </properties>
+ </tile>
+ <tile id="1281">
+  <properties>
+   <property name="Water" value="T"/>
+  </properties>
+ </tile>
+ <tile id="1293">
+  <animation>
+   <frame tileid="1293" duration="300"/>
+   <frame tileid="1294" duration="300"/>
+   <frame tileid="1295" duration="300"/>
+   <frame tileid="1296" duration="300"/>
+  </animation>
+ </tile>
+ <tile id="1303">
+  <properties>
+   <property name="Water" value="T"/>
+  </properties>
+ </tile>
+ <tile id="1304">
+  <properties>
+   <property name="Water" value="T"/>
+  </properties>
+ </tile>
+ <tile id="1305">
+  <properties>
+   <property name="Water" value="T"/>
+  </properties>
+ </tile>
+ <tile id="1306">
+  <properties>
+   <property name="Water" value="T"/>
+  </properties>
+ </tile>
 </tileset>

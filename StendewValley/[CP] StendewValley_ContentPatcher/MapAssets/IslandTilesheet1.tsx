@@ -146,6 +146,26 @@
    <property name="Type" value="Sand"/>
   </properties>
  </tile>
+ <tile id="165">
+  <properties>
+   <property name="Water" value="T"/>
+  </properties>
+ </tile>
+ <tile id="166">
+  <properties>
+   <property name="Water" value="T"/>
+  </properties>
+ </tile>
+ <tile id="167">
+  <properties>
+   <property name="Water" value="T"/>
+  </properties>
+ </tile>
+ <tile id="168">
+  <properties>
+   <property name="Water" value="T"/>
+  </properties>
+ </tile>
  <tile id="173">
   <properties>
    <property name="Type" value="Sand"/>
@@ -166,6 +186,26 @@
    <property name="Type" value="Sand"/>
   </properties>
  </tile>
+ <tile id="197">
+  <properties>
+   <property name="Water" value="T"/>
+  </properties>
+ </tile>
+ <tile id="198">
+  <properties>
+   <property name="Water" value="T"/>
+  </properties>
+ </tile>
+ <tile id="199">
+  <properties>
+   <property name="Water" value="T"/>
+  </properties>
+ </tile>
+ <tile id="200">
+  <properties>
+   <property name="Water" value="T"/>
+  </properties>
+ </tile>
  <tile id="205">
   <properties>
    <property name="Type" value="Sand"/>
@@ -184,6 +224,26 @@
  <tile id="208">
   <properties>
    <property name="Type" value="Sand"/>
+  </properties>
+ </tile>
+ <tile id="229">
+  <properties>
+   <property name="Water" value="T"/>
+  </properties>
+ </tile>
+ <tile id="230">
+  <properties>
+   <property name="Water" value="T"/>
+  </properties>
+ </tile>
+ <tile id="231">
+  <properties>
+   <property name="Water" value="T"/>
+  </properties>
+ </tile>
+ <tile id="232">
+  <properties>
+   <property name="Water" value="T"/>
   </properties>
  </tile>
  <tile id="233">
