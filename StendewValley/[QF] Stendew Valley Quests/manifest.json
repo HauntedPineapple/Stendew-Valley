@@ -1,0 +1,18 @@
+{
+    "Name": "StendewValley_Quests",
+    "Author": "HauntedPineapple",
+    "Version": "0.0.1",
+    "Description": "Quests for Stendew Valley",
+    "UniqueID": "HauntedPineapple.StendewValley_Quests",
+    "MinimumApiVersion": "3.6.0",
+    "UpdateKeys": [],
+    "ContentPackFor": {
+        "UniqueID": "PurrplingCat.QuestFramework",
+        "MinimumVersion": "1.4.0"
+    },
+    "Dependencies": [
+        {
+            "UniqueID": "PurrplingCat.QuestEssentials"
+        }
+    ]
+}

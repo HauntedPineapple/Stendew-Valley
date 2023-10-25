@@ -1,0 +1,174 @@
+{
+    "Format": "1.0",
+    "Quests": [
+        {
+            "Name": "go_to_island",
+            "Type": "Location",
+            "Title": "Go To The Mysterious Island",
+            "Description": "You received an anonymous letter in the mail telling you to go to an island.",
+            "Objective": "Take the boat to go to the island.",
+            "Trigger": "Custom_MainIsland",
+            "NextQuests": [
+                "talk_to_sten"
+            ]
+        },
+        {
+            "Name": "talk_to_sten",
+            "Type": "PurrplingCat.QuestEssentials/Talk",
+            "Title": "Talk to the Owner",
+            "Description": "Now that you have arrived on the mystery island, you should probably find whoever owns this place.",
+            "Objective": "Talk to the owner of the island",
+            "Trigger": "Sten"
+        },
+        {
+            "Name": "sten_firsttask",
+            "Type": "Monster",
+            "Title": "Kill Slimes In Sten's House",
+            "Description": "Sten wants you to kill the slimes in his house in order to rescue his mods drive.",
+            "Objective": "Kill 5 slimes.",
+            "Trigger": "Green_Slime 5 Sten",
+            "ReactionText": "Hey! This has some scratches on it… Why don’t you complete some more errands for me and I’ll think about whether I feel like telling you where the item is then.",
+            "FriendshipGain": {
+                "Sten": 250
+            }
+        },
+        {
+            "Name": "sten_amethyst",
+            "Type": "ItemDelivery",
+            "Title": "Bring Sten an Amethyst",
+            "Objective": "Sten wants an amethyst, bring him one.",
+            "Trigger": "Sten 66",
+            "ReactionText": "This shit SUCKS! Why the fuck does Abigail eat these.$u#$e I wanted to know why she likes eating them so much,  but I regret even asking for this. I’d say thanks, but I think I just broke my tooth. Well I don’t feel particularly happy, which doesn’t bode well for you. I’m feeling kind though,  so I’ll let you make it up to me by giving you another quest.",
+            "FriendshipGain": {
+                "Sten": 250
+            }
+        },
+        {
+            "Name": "sten_fiber",
+            "Type": "ItemDelivery",
+            "Title": "Bring Sten Some Fiber",
+            "Objective": "Bring Sten 10 fiber",
+            "Trigger": "Sten 771 10",
+            "ReactionText": "Wait, did you actually bring me fiber? You know when I said I wanted ‘fiber’ I obviously meant I wanted you to bring me weed,I obviously meant I wanted you to bring me weed, not weeds you found in your backyard! I thought the air quotations gave it away.",
+            "FriendshipGain": {
+                "Sten": 250
+            }
+        }
+
+        // ,{
+        //     "Name": "sten_underpants",
+        //     "Type": "ItemDelivery",
+        //     "Title": "TITLE",
+        //     "Description": "BLAHBLAH",
+        //     "Objective": "BLAHBLAH",
+        //     "Trigger": "Sten 789",
+        //     "ReactionText": "",
+        //     "FriendshipGain": {"Sten": 250}
+        // },
+        // {
+        //     "Name": "sten_mead",
+        //     "Type": "ItemDelivery",
+        //     "Title": "TITLE",
+        //     "Description": "BLAHBLAH",
+        //     "Objective": "BLAHBLAH",
+        //     "Trigger": "Sten 459 2",
+        //     "ReactionText": "",
+        //     "FriendshipGain": {"Sten": 250}
+        // },
+
+
+        // {
+        //     "Name": "sten_headband",
+        //     "Type": "ItemDelivery",
+        //     "Title": "TITLE",
+        //     "Description": "BLAHBLAH",
+        //     "Objective": "BLAHBLAH",
+        //     "Trigger": "Sten ID",
+        //     "ReactionText": "",
+        //     "FriendshipGain": {"Sten": 250}
+        // }
+
+        // ,{
+        //     "Name": "NAME",
+        //     "Type": "ItemDelivery",
+        //     "Title": "TITLE",
+        //     "Description": "BLAHBLAH",
+        //     "Objective": "BLAHBLAH",
+        //     "Trigger": "Sten ID AMOUNT",
+        //     "ReactionText": "",
+        //     "FriendshipGain": {"Sten": 250}
+        // }
+    ],
+    "Offers": [
+        {
+            "QuestName": "go_to_island",
+            "OfferedBy": "Mail",
+            "OfferDetails": {
+                "Topic": "Mysterious Item On Mysterious Island",
+                "Text": "Hello @.^I heard some rumors that there is an interesting item on a mysterious island nearby. I’ve arranged transportation for you on the beach. I would’ve gone to get the item myself, but I heard that there is a scary man that lives on the island.^  -Anonymous"
+            },
+            "When": {
+                "Weather": "sunny"
+            }
+        },
+        {
+            "QuestName": "sten_firsttask",
+            "OfferedBy": "NPC",
+            "OfferDetails": {
+                "NpcName": "Sten",
+                "DialogueText": "First task I want you to do is to save my precious Skyrim mods drive from the slimes in my house.$k#$b# Don't look at me like that. I know what you're thinking.$k#$b#"
+            },
+            "When": {"not:HasActiveQuest": "talk_to_sten@HauntedPineapple.HauntedPineapple.StendewValley_Quests"}
+        },
+        {
+            "QuestName": "sten_amethyst",
+            "OfferedBy": "NPC",
+            "OfferDetails": {
+                "NpcName": "Sten",
+                "DialogueText": "Now for the second task. Well...I want one amethyst. No, I’m not joking. Just bring it to me.$k#$b#"
+            },
+            "When": {"not:HasActiveQuest": "sten_firsttask@HauntedPineapple.HauntedPineapple.StendewValley_Quests", "FriendshipLevel": "Sten 1"}
+        },
+        {
+            "QuestName": "sten_fiber",
+            "OfferedBy": "NPC",
+            "OfferDetails": {
+                "NpcName": "Sten",
+                "DialogueText": "Oh you’re here. I need you to get me some… ‘fiber’. Yeah let’s go with that. 10 fiber."
+            },
+            "When": {"not:HasActiveQuest": "sten_amethyst@HauntedPineapple.HauntedPineapple.StendewValley_Quests", "FriendshipLevel": "Sten 2"}
+        }
+
+
+
+        // ,{
+        //     "QuestName": "sten_underpants",
+        //     "OfferedBy": "NPC",
+        //     "OfferDetails": {
+        //         "NpcName": "Sten",
+        //         "DialogueText": "BLAHBLAH"
+        //     },
+        //     "When": {"not:HasActiveQuest": "sten_fiber@HauntedPineapple.HauntedPineapple.StendewValley_Quests", "FriendshipLevel": "Sten 3"}
+        // },
+        // {
+        //     "QuestName": "sten_mead",
+        //     "OfferedBy": "NPC",
+        //     "OfferDetails": {
+        //         "NpcName": "Sten",
+        //         "DialogueText": "BLAHBLAH"
+        //     },
+        //     "When": {"not:HasActiveQuest": "sten_underpants@HauntedPineapple.HauntedPineapple.StendewValley_Quests", "FriendshipLevel": "Sten 4"}
+        // },
+
+        
+        // {
+        //     "QuestName": "sten_headband",
+        //     "OfferedBy": "NPC",
+        //     "OfferDetails": {
+        //         "NpcName": "Sten",
+        //         "DialogueText": "BLAHBLAH"
+        //     },
+        //     "When": {"not:HasActiveQuest": "sten_mead@HauntedPineapple.HauntedPineapple.StendewValley_Quests", "FriendshipLevel": "Sten 5"}
+        // }
+    ]
+}
