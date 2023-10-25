@@ -118,7 +118,7 @@
                 "NpcName": "Sten",
                 "DialogueText": "First task I want you to do is to save my precious Skyrim mods drive from the slimes in my house.$k#$b# Don't look at me like that. I know what you're thinking.$k#$b#"
             },
-            "When": {"not:HasActiveQuest": "talk_to_sten@HauntedPineapple.HauntedPineapple.StendewValley_Quests"}
+            "When": {"not:HasActiveQuest": "talk_to_sten@HauntedPineapple.HauntedPineapple.StendewValley_Quests | go_to_island@HauntedPineapple.HauntedPineapple.StendewValley_Quests"}
         },
         {
             "QuestName": "sten_amethyst",
