@@ -118,7 +118,7 @@
                 "NpcName": "Sten",
                 "DialogueText": "First task I want you to do is to save my precious Skyrim mods drive from the slimes in my house.$k#$b# Don't look at me like that. I know what you're thinking.$k#$b#"
             },
-            "When": {"not:HasActiveQuest": "talk_to_sten@HauntedPineapple.HauntedPineapple.StendewValley_Quests | go_to_island@HauntedPineapple.HauntedPineapple.StendewValley_Quests"}
+            "When": {"not:HasActiveQuest": "talk_to_sten@HauntedPineapple.StendewValley_Quests | go_to_island@HauntedPineapple.StendewValley_Quests"}
         },
         {
             "QuestName": "sten_amethyst",
@@ -127,7 +127,7 @@
                 "NpcName": "Sten",
                 "DialogueText": "Now for the second task. Well...I want one amethyst. No, I’m not joking. Just bring it to me.$k#$b#"
             },
-            "When": {"not:HasActiveQuest": "sten_firsttask@HauntedPineapple.HauntedPineapple.StendewValley_Quests", "FriendshipLevel": "Sten 1"}
+            "When": {"not:HasActiveQuest": "sten_firsttask@HauntedPineapple.StendewValley_Quests", "FriendshipLevel": "Sten 1"}
         },
         {
             "QuestName": "sten_fiber",
@@ -136,7 +136,7 @@
                 "NpcName": "Sten",
                 "DialogueText": "Oh you’re here. I need you to get me some… ‘fiber’. Yeah let’s go with that. 10 fiber."
             },
-            "When": {"not:HasActiveQuest": "sten_amethyst@HauntedPineapple.HauntedPineapple.StendewValley_Quests", "FriendshipLevel": "Sten 2"}
+            "When": {"not:HasActiveQuest": "sten_amethyst@HauntedPineapple.StendewValley_Quests", "FriendshipLevel": "Sten 2"}
         }
 
 
@@ -148,7 +148,7 @@
         //         "NpcName": "Sten",
         //         "DialogueText": "BLAHBLAH"
         //     },
-        //     "When": {"not:HasActiveQuest": "sten_fiber@HauntedPineapple.HauntedPineapple.StendewValley_Quests", "FriendshipLevel": "Sten 3"}
+        //     "When": {"not:HasActiveQuest": "sten_fiber@HauntedPineapple.StendewValley_Quests", "FriendshipLevel": "Sten 3"}
         // },
         // {
         //     "QuestName": "sten_mead",
@@ -157,7 +157,7 @@
         //         "NpcName": "Sten",
         //         "DialogueText": "BLAHBLAH"
         //     },
-        //     "When": {"not:HasActiveQuest": "sten_underpants@HauntedPineapple.HauntedPineapple.StendewValley_Quests", "FriendshipLevel": "Sten 4"}
+        //     "When": {"not:HasActiveQuest": "sten_underpants@HauntedPineapple.StendewValley_Quests", "FriendshipLevel": "Sten 4"}
         // },
 
         
@@ -168,7 +168,7 @@
         //         "NpcName": "Sten",
         //         "DialogueText": "BLAHBLAH"
         //     },
-        //     "When": {"not:HasActiveQuest": "sten_mead@HauntedPineapple.HauntedPineapple.StendewValley_Quests", "FriendshipLevel": "Sten 5"}
+        //     "When": {"not:HasActiveQuest": "sten_mead@HauntedPineapple.StendewValley_Quests", "FriendshipLevel": "Sten 5"}
         // }
     ]
 }
