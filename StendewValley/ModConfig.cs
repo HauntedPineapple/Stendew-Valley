@@ -6,13 +6,8 @@ using System.Threading.Tasks;
 
 namespace StendewValley
 {
-    internal class MonsterBehaviors
+    class ModConfig
     {
-        // Reference to Globals
-
-        public MonsterBehaviors(Globals globals)
-        {
-
-        }
+        public bool PassiveMobs { get; set; } = true;
     }
 }
