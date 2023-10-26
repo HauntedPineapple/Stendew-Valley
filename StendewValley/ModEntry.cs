@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using HarmonyLib;
 using Microsoft.Xna.Framework;
@@ -15,6 +16,13 @@ namespace StendewValley
     {
         private static ModConfig Config;
 
+        // Name of the maps in Content Patcher
+        private readonly string MAIN_ISLAND_NAME = "Custom_MainIsland";
+
+        private GameLocation mainIsland;
+
+        private CustomLargeObject test_boulder;
+
         #region Entry Method
         /// <summary>The mod entry point, called after the mod is first loaded.</summary>
         /// <param name="helper">Provides simplified APIs for writing mods.</param>
@@ -29,6 +37,7 @@ namespace StendewValley
             Config = this.Helper.ReadConfig<ModConfig>();
 
             Helper.Events.GameLoop.GameLaunched += GameLoop_GameLaunched;
+            helper.Events.GameLoop.SaveLoaded += OnSaveLoaded;
 
             // Set the intial ModInfo variable states
             Globals.Info.monstersPeaceful = true;
@@ -41,23 +50,7 @@ namespace StendewValley
 
             try
             {
-                // Monsters damage method
-                harmony.Patch(
-                   original: AccessTools.Method(typeof(GameLocation), "damageMonster", new Type[] { typeof(Microsoft.Xna.Framework.Rectangle), typeof(int), typeof(int), typeof(bool), typeof(float), typeof(int), typeof(float), typeof(float), typeof(bool), typeof(Farmer) }),
-                   postfix: new HarmonyMethod(typeof(ModEntry), nameof(ModEntry.damageMonster_Postfix))
-                );
-
-                // Individual monster behaviours
-                /*
-                harmony.Patch(
-                   original: AccessTools.Method(typeof(GreenSlime), nameof(GreenSlime.behaviorAtGameTick)),
-                   prefix: new HarmonyMethod(typeof(ModEntry), nameof(ModEntry.GreenSlime_behaviorAtGameTick_prefix))
-                );
-                harmony.Patch(
-                   original: AccessTools.Method(typeof(DustSpirit), nameof(DustSpirit.behaviorAtGameTick)),
-                   postfix: new HarmonyMethod(typeof(ModEntry), nameof(ModEntry.DustSpirit_behaviorAtGameTick_postfix))
-                );
-                */
+                // Patch monster behaviour
                 harmony.Patch(
                    original: AccessTools.Method(typeof(Monster), nameof(Monster.updateMovement)),
                    prefix: new HarmonyMethod(typeof(ModEntry), nameof(ModEntry.Monster_updateMovement_prefix))
@@ -95,7 +88,25 @@ namespace StendewValley
                     getValue: () => Config.PassiveMobs,
                     setValue: value => Config.PassiveMobs = value
                 );
+                configMenu.AddBoolOption(
+                    mod: ModManifest,
+                    name: () => "Spawn Boulder",
+                    getValue: () => Config.TestBoulderSpawn,
+                    setValue: value => { Config.TestBoulderSpawn = value; test_boulder.Enabled = value; }
+                );
             }
+        }
+
+        private void OnSaveLoaded(object sender, SaveLoadedEventArgs e)
+        {
+            // Set up the location variables
+            mainIsland = GetGameLocationByName(MAIN_ISLAND_NAME);
+
+            // Set up the custom boulders
+            InitializeCustomObjects();
+
+            // Boulder follows menu option on initial load
+            test_boulder.Enabled = Config.TestBoulderSpawn;
         }
 
 
@@ -116,14 +127,14 @@ namespace StendewValley
         // Monster methods
 
         /// <summary>
-        /// 
+        /// Makes monsters passive when wearing the special item
         /// </summary>
-        /// <param name="__instance"></param>
-        /// <param name="time"></param>
-        /// <returns></returns>
+        /// <param name="__instance">Instance of a monster</param>
+        /// <param name="time">Time variable (required)</param>
+        /// <returns>True if continuing to base method, false if skipping it</returns>
         private static bool Monster_updateMovement_prefix(Monster __instance, GameTime time)
         {
-            if ((__instance.Health <= 0 && __instance.IsWalkingTowardPlayer) || Config.PassiveMobs)
+            if (Config.PassiveMobs && __instance.Health == __instance.MaxHealth)
             {
                 __instance.defaultMovementBehavior(time);
                 return false;
@@ -131,54 +142,41 @@ namespace StendewValley
             return true;
         }
 
+        // Helper methods
         /// <summary>
-        /// Stops the slime from jumping towards the player if Sten's bald cap is being worn
+        /// Search for a reference of a GameLocation by the map's name.
         /// </summary>
-        /// <param name="__instance">Slime monster instance</param>
-        /// <param name="time">In game time in ticks (required parameter for base)</param>
-        /// <param name="___readyToJump">Reference to the readyToJump varaible in base</param>
-        private static void GreenSlime_behaviorAtGameTick_prefix(GreenSlime __instance, GameTime time, ref int ___timeSinceLastJump)
+        /// <param name="locationName">Name of the map (Woods, Forest, etc.)</param>
+        /// <returns></returns>
+        private GameLocation GetGameLocationByName(string locationName)
         {
-            if (Config.PassiveMobs)
+            // Loop through all locations to get a ref to given map
+            IList<GameLocation> locations = Game1.locations;
+            for (int i = Game1.locations.Count - 1; i >= 0; i--)
             {
-                ___timeSinceLastJump = 0; // Slime will not jump???
-                __instance.focusedOnFarmers = false;
-                // Globals.Monitor.Log("We're so back!", LogLevel.Debug);
+                if (locations[i].Name == locationName)
+                {
+                    return locations[i];
+                }
             }
-            else
-            {
-                // Globals.Monitor.Log("It's over boys", LogLevel.Debug);
-            }
+
+            // No map was found out of all GameLocations
+            throw new KeyNotFoundException(
+                "Map \"" + locationName + "\" not found in Game1.locations" +
+                " (has this method been called before OnSaveLoaded()?)");
         }
 
-        /// <summary>
-        /// Stops the dust spirit from attacking or fleeing from player if Sten's bald cap is being worn
-        /// </summary>
-        /// <param name="__instance">Dust Spirit instanc</param>
-        /// <param name="___runningAwayFromFarmer">Reference to the runningAwayFromFarmer variable in base</param>
-        /// <param name="___chargingFarmer">Reference to the chargingFarmer variable in base</param>
-        private static void DustSpirit_behaviorAtGameTick_postfix(DustSpirit __instance, ref bool ___runningAwayFromFarmer, ref bool ___chargingFarmer)
+        private void InitializeCustomObjects()
         {
-            if (Config.PassiveMobs && __instance.Health == __instance.MaxHealth)
-            {
-                ___runningAwayFromFarmer = false;   // Dust spirit won't flee
-                ___chargingFarmer = false;          // Dust spirit won't charge
-            }
-        }
+            // Test boulder
+            CustomLargeObject temp = new CustomLargeObject("Test", true, mainIsland);
+            temp.SetSprite(58, 62, "Buildings", 17, 1);
+            temp.SetSprite(59, 62, "Buildings", 17, 1);
+            temp.SetSprite(58, 63, "Buildings", 17, 1);
+            temp.SetSprite(59, 63, "Buildings", 17, 1);
+            temp.Spawn();
 
-        /// <summary>
-        /// Makes monsters harmless while wearing Sten's hat
-        /// </summary>
-        /// <param name="__instance">Instance of monster</param>
-        private static void damageMonster_Postfix(GameLocation __instance)
-        {
-            for (int i = __instance.characters.Count - 1; i >= 0; i--)
-            {
-                Monster monster;
-                if ((monster = (__instance.characters[i] as Monster)) != null && Config.PassiveMobs
-                                && monster.Health == monster.MaxHealth)
-                    monster.farmerPassesThrough = true;
-            }
+            test_boulder = temp;
         }
     }
 }

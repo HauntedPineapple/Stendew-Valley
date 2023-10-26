@@ -9,5 +9,6 @@ namespace StendewValley
     class ModConfig
     {
         public bool PassiveMobs { get; set; } = true;
+        public bool TestBoulderSpawn { get; set; } = true;
     }
 }
