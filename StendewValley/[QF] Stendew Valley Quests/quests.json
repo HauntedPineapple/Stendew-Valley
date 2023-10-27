@@ -78,27 +78,24 @@
       "Description": "Sten is very obsessed with Skyrim, and now he wants mead.",
       "Objective": "Bring Sten mead.",
       "Trigger": "Sten 459",
-      "ReactionText": "What took you so long just to get me alcohol? #$b# You know what, it doesn’t matter. I'm gonna spend the whole day drinking, while playing some more Skyrim. #$b# DO NOT and I mean DO NOT come back to bother me until I'm done with the whole game.#$2#",
+      "ReactionText": "What took you so long just to get me alcohol?#$b#You know what, it doesn’t matter. I'm gonna spend the whole day drinking and playing Skyrim.#$b#DO NOT and I mean DO NOT come back to bother me until I'm done with the whole game.#$2#",
       "FriendshipGain": {
         "Sten": 150
       },
       "ConversationTopic": {
-        "AddWhenQuestAccepted": "StenIsPlayingSkyrim 1",
+        "AddWhenQuestCompleted": "StenIsPlayingSkyrim 1",
         "RemoveWhenQuestCompleted": "StenThinksYoureAnnoying_1 StenThinksYoureAnnoying_2"
-      },
-      "NextQuests": [
-        "getItemFromSten"
-      ]
+      }
     },
     {
       "Name": "getItemFromSten",
       "Type": "PurrplingCat.QuestEssentials/Talk",
-      "Title": "Talk to Sten Tomorrow",
-      "Objective": "Talk to Sten tomorrow to get the next quest.",
+      "Title": "Talk to Sten",
+      "Objective": "Talk to Sten later to get the next quest.",
       "Trigger": "Sten",
       "ReactionText": "Well, as nice as the free labor is, I’m starting to get bored of you.#$b#I want to go back to installing Skyrim mods, so let’s do a trade: I’ll give you the item and you leave me the fuck alone.",
       "ConversationTopic": {
-        "AddWhenQuestCompleted": "AllQuestsCompleted"
+        "AddWhenQuestCompleted": "AllQuestsCompleted 10"
       },
       "Reward": "Chocolate Cake", //placeholder item for now
       "RewardType": "Object",
@@ -179,6 +176,19 @@
       "When": {
         "not:HasActiveQuest": "sten_underpants@HauntedPineapple.StendewValley_Quests",
         "FriendshipLevel": "Sten 5",
+        "QuestNeverCompleted": "yes"
+      }
+    },
+    {
+      "QuestName": "getItemFromSten",
+      "OfferedBy": "NPC",
+      "OfferDetails": {
+        "NpcName": "Sten",
+        "DialogueText": "Dude, I'm trying to play my game, why can't you just leave me alone?$2#$b#Come back later and I'll probably have something else for you to do."
+      },
+      "When": {
+        "not:HasActiveQuest": "sten_mead@HauntedPineapple.StendewValley_Quests",
+        "FriendshipLevel": "Sten 6",
         "QuestNeverCompleted": "yes"
       }
     }
