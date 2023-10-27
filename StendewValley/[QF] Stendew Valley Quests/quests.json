@@ -43,7 +43,7 @@
       "Title": "Bring Sten an Amethyst",
       "Objective": "Sten wants an amethyst, bring him one.",
       "Trigger": "Sten 66",
-      "ReactionText": "Hmmm...#$b#This shit SUCKS!$2#$b# Why the fuck does Abigail eat these?! I wanted to know why she likes eating them so much, but I regret even asking for this.#$b#I’d say thanks, but I think I just broke my tooth.#$b#Well I don’t feel particularly happy, which doesn’t bode well for you. I’m feeling kind though, so I’ll let you make it up to me by giving you another quest.",
+      "ReactionText": "Hmmm...#$b#This shit SUCKS!$2#$b# Why the fuck does Abigail eat these?! I wanted to know why she likes eating them so much, but I regret even asking for this.$2#$b#I’d say thanks, but I think I just broke my tooth.$2#$b#Well I don’t feel particularly happy, which doesn’t bode well for you. I’m feeling kind though, so I’ll let you make it up to me by giving you another quest.",
       "FriendshipGain": {
         "Sten": 150
       }
@@ -55,7 +55,7 @@
       "Description": "Sten wants fiber for some reason. Might as well give it to him.",
       "Objective": "Bring Sten 10 fiber",
       "Trigger": "Sten 771 10",
-      "ReactionText": "Wait, did you actually bring me fiber? #$b# You know when I said I wanted ‘fiber’, I obviously meant I wanted you to bring me weed, not weeds you found in your backyard! I thought the air quotations gave it away.#$3#",
+      "ReactionText": "Wait, did you actually bring me fiber? #$b# You know when I said I wanted 'fiber', I obviously meant I wanted you to bring me weed, not weeds you found in your backyard! I thought the air quotations gave it away.#$3#",
       "FriendshipGain": {
         "Sten": 150
       }
@@ -161,7 +161,7 @@
       "OfferedBy": "NPC",
       "OfferDetails": {
         "NpcName": "Sten",
-        "DialogueText": "I want you to steal Mayor Lewis's underpants.#$b#No, I’m not a pervert.#$b#I don’t want them for anything weird, I just think it’ll piss him off and that sounds really funny."
+        "DialogueText": "I want you to steal Mayor Lewis's underpants.#$b#No, I’m not a pervert. I mean, I am, but not that kind of pervert.$2#$b#Listen, I don’t want them for anything weird, I just think it’ll piss him off and that sounds really funny."
       },
       "When": {
         "not:HasActiveQuest": "sten_fiber@HauntedPineapple.StendewValley_Quests",
@@ -174,7 +174,7 @@
       "OfferedBy": "NPC",
       "OfferDetails": {
         "NpcName": "Sten",
-        "DialogueText": "Oh, it’s you again... #$b# Is there no one else that you can go bother?#$b#$2# Since you’re here I want you to do another errand for me. Get mead for me."
+        "DialogueText": "Oh, it’s you again...#$b#Is there no one else that you can go bother?$2#$b#Since you’re here I want you to do another errand for me. Get mead for me."
       },
       "When": {
         "not:HasActiveQuest": "sten_underpants@HauntedPineapple.StendewValley_Quests",
