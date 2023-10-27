@@ -1,6 +1,6 @@
 {
-  "spring": "610 Town 27 49 2 stand_forward",
-  "summer": "610 Town 27 49 2 stand_forward",
-  "fall": "610 Town 27 49 2 stand_forward",
-  "winter": "610 Town 27 49 2 stand_forward"
+  "spring": "610 Custom_MainIsland 40 60 0",
+  "summer": "610 Custom_MainIsland 40 60 0",
+  "fall": "610 Custom_MainIsland 40 60 0",
+  "winter": "610 Custom_MainIsland 40 60 0"
 }
