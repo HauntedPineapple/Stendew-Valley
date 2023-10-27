@@ -4,7 +4,7 @@
       "Action": "EditData",
       "Target": "data/NPCDispositions",
       "Entries": {
-        "Sten": "adult/rude/neutral/negative/male/non-datable/null/Other/summer 1//Custom_MainIsland 40 60 0/Sten"
+        "Sten": "adult/rude/neutral/negative/male/non-datable/null/Other/summer 1//Custom_MainIsland 58 43 2/Sten"
       }
     }
   ]
