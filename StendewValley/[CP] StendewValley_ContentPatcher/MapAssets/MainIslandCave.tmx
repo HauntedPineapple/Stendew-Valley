@@ -3,6 +3,7 @@
  <properties>
   <property name="Light" value="12 3 1 14 3 1"/>
   <property name="SpawnMountainFarmOreRect" value="5 3 17 20"/>
+  <property name="Warp" value="12 25 Custom_MainIsland 58 63 13 25 Custom_MainIsland 59 63 13 6 Custom_MainIsland 43 22"/>
  </properties>
  <tileset firstgid="1" source="Mine.tsx"/>
  <tileset firstgid="289" source="Paths.tsx"/>
