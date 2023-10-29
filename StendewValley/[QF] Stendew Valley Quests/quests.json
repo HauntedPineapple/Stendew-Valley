@@ -1,0 +1,196 @@
+{
+  "Format": "1.0",
+  "Quests": [
+    {
+      "Name": "go_to_island",
+      "Type": "Location",
+      "Title": "Go To The Mysterious Island",
+      "Description": "You received an anonymous letter in the mail telling you to go to an island.",
+      "Objective": "Take the boat to go to the island.",
+      "Trigger": "Custom_MainIsland",
+      "NextQuests": [
+        "talk_to_sten"
+      ]
+    },
+    {
+      "Name": "talk_to_sten",
+      "Type": "PurrplingCat.QuestEssentials/Talk",
+      "Title": "Talk to the Owner",
+      "Description": "Now that you have arrived on the mystery island, you should probably find whoever owns this place.",
+      "Objective": "Talk to the owner of the island",
+      "Trigger": "Sten",
+      "ReactionText": "Who are you? What are you doing on my island?$2#$b# Oh... Honestly, I didn't think anyone would take that letter seriously, I send it to people every year to fuck with them and they usually ignore me.#$b# Since you're here and want the item, you have to do some small tasks for me first."
+    },
+    {
+      "Name": "sten_slimes",
+      "Type": "ItemDelivery", //     "Type": "Monster",
+      "Title": "Get soapstone", //     "Title": "Kill Slimes In Sten's House",
+      "Description": "----", //     "Description": "Sten wants you to kill the slimes in his house in order to rescue his mods drive.",
+      "Objective": "----", //     "Objective": "Kill 5 slimes.",
+      "Trigger": "Sten 572", //     "Trigger": "Green_Slime 5 Sten",
+      "ReactionText": "Hey! This has some scratches on it! Did you accidentally hit my drive when killing the slimes? Watch where you wave your sword around, dude!$2#$b# ...Complete some more errands for me and I’ll think about whether I feel like telling you where the item is then.#$0#",
+      "FriendshipGain": {
+        "Sten": 150
+      },
+      "ConversationTopic": {
+        "AddWhenQuestAccepted": "StenThinksYoureAnnoying_1 100",
+        "AddWhenQuestCompleted": "StenThinksYoureAnnoying_2 100"
+      }
+    },
+    {
+      "Name": "sten_amethyst",
+      "Type": "ItemDelivery",
+      "Title": "Bring Sten an Amethyst",
+      "Objective": "Sten wants an amethyst, bring him one.",
+      "Trigger": "Sten 66",
+      "ReactionText": "Hmmm...#$b#This shit SUCKS!$2#$b# Why the fuck does Abigail eat these?! I wanted to know why she likes eating them so much, but I regret even asking for this.$2#$b#I’d say thanks, but I think I just broke my tooth.$2#$b#Well I don’t feel particularly happy, which doesn’t bode well for you. I’m feeling kind though, so I’ll let you make it up to me by giving you another quest.",
+      "FriendshipGain": {
+        "Sten": 150
+      }
+    },
+    {
+      "Name": "sten_fiber",
+      "Type": "ItemDelivery",
+      "Title": "Retrieve 'Fiber'",
+      "Description": "Sten wants fiber for some reason. Might as well give it to him.",
+      "Objective": "Bring Sten 10 fiber",
+      "Trigger": "Sten 771 10",
+      "ReactionText": "Wait, did you actually bring me fiber? #$b# You know when I said I wanted 'fiber', I obviously meant I wanted you to bring me weed, not weeds you found in your backyard! I thought the air quotations gave it away.#$3#",
+      "FriendshipGain": {
+        "Sten": 150
+      }
+    },
+    {
+      "Name": "sten_underpants",
+      "Type": "ItemDelivery",
+      "Title": "Mayor Lewis' 'Shorts'",
+      "Objective": "Bring Sten Mayor Lewis' underpants",
+      "Trigger": "Sten 789",
+      "ReactionText": "Oh wow, you know I didn’t think you had the guts to actually do that to the mayor but you proved me wrong.#$1#",
+      "FriendshipGain": {
+        "Sten": 150
+      }
+    },
+    {
+      "Name": "sten_mead",
+      "Type": "ItemDelivery",
+      "Title": "Skyrim Mead",
+      "Description": "Sten is very obsessed with Skyrim, and now he wants mead.",
+      "Objective": "Bring Sten mead.",
+      "Trigger": "Sten 459",
+      "ReactionText": "What took you so long just to get me alcohol?#$b#You know what, it doesn’t matter. I'm gonna spend the whole day drinking and playing Skyrim.#$b#DO NOT and I mean DO NOT come back to bother me until I'm done with the whole game.#$2#",
+      "FriendshipGain": {
+        "Sten": 150
+      },
+      "ConversationTopic": {
+        "AddWhenQuestCompleted": "StenIsPlayingSkyrim 1",
+        "RemoveWhenQuestCompleted": "StenThinksYoureAnnoying_1 StenThinksYoureAnnoying_2"
+      }
+    },
+    {
+      "Name": "getItemFromSten",
+      "Type": "PurrplingCat.QuestEssentials/Talk",
+      "Title": "Talk to Sten",
+      "Objective": "Talk to Sten later to get the next quest.",
+      "Trigger": "Sten",
+      "ReactionText": "Well, as nice as the free labor is, I’m starting to get bored of you.#$b#I want to go back to installing Skyrim mods, so let’s do a trade: I’ll give you the item and you leave me the fuck alone.",
+      "ConversationTopic": {
+        "AddWhenQuestCompleted": "AllQuestsCompleted 10"
+      },
+      "Reward": "Chocolate Cake", //placeholder item for now
+      "RewardType": "Object",
+      "RewardAmount": 1
+    }
+  ],
+  "Offers": [
+    {
+      "QuestName": "go_to_island",
+      "OfferedBy": "Mail",
+      "OfferDetails": {
+        "Topic": "Mysterious Item On Mysterious Island",
+        "Text": "Hello @.^I heard some rumors that there is an interesting item on a mysterious island nearby. I’ve arranged transportation for you on the beach. I would’ve gone to get the item myself, but I heard that there is a scary man that lives on the island.^  -Anonymous"
+      },
+      "When": {
+        "Weather": "sunny",
+        "QuestNeverCompleted": "yes"
+      }
+    },
+    {
+      "QuestName": "sten_slimes",
+      "OfferedBy": "NPC",
+      "OfferDetails": {
+        "NpcName": "Sten",
+        "DialogueText": "First task I want you to do is to save my precious Skyrim mods drive from the slimes in my house. Don't look at me like that. I know what you're thinking.#$b#'Sten, do you not clean your house? I’ve heard slimes only live in cave-like or gross environments.'#$b#But that’s none of your concern. Just save the drive and I’ll think about giving you the item."
+      },
+      "When": {
+        "not:HasActiveQuest": "talk_to_sten@HauntedPineapple.StendewValley_Quests | go_to_island@HauntedPineapple.StendewValley_Quests",
+        "QuestNeverCompleted": "yes"
+      }
+    },
+    {
+      "QuestName": "sten_amethyst",
+      "OfferedBy": "NPC",
+      "OfferDetails": {
+        "NpcName": "Sten",
+        "DialogueText": "Now for the second task. Well...#$b#I want one amethyst. No, I’m not joking. Just bring it to me."
+      },
+      "When": {
+        "not:HasActiveQuest": "sten_slimes@HauntedPineapple.StendewValley_Quests",
+        "FriendshipLevel": "Sten 1",
+        "QuestNeverCompleted": "yes"
+      }
+    },
+    {
+      "QuestName": "sten_fiber",
+      "OfferedBy": "NPC",
+      "OfferDetails": {
+        "NpcName": "Sten",
+        "DialogueText": "Oh you’re here. I need you to get me some... 'fiber'.#$b#Yeah let’s go with that. 10 fiber."
+      },
+      "When": {
+        "not:HasActiveQuest": "sten_amethyst@HauntedPineapple.StendewValley_Quests",
+        "FriendshipLevel": "Sten 2",
+        "QuestNeverCompleted": "yes"
+      }
+    },
+    {
+      "QuestName": "sten_underpants",
+      "OfferedBy": "NPC",
+      "OfferDetails": {
+        "NpcName": "Sten",
+        "DialogueText": "I want you to steal Mayor Lewis's underpants.#$b#No, I’m not a pervert. I mean, I am, but not that kind of pervert.$2#$b#Listen, I don’t want them for anything weird, I just think it’ll piss him off and that sounds really funny."
+      },
+      "When": {
+        "not:HasActiveQuest": "sten_fiber@HauntedPineapple.StendewValley_Quests",
+        "FriendshipLevel": "Sten 4",
+        "QuestNeverCompleted": "yes"
+      }
+    },
+    {
+      "QuestName": "sten_mead",
+      "OfferedBy": "NPC",
+      "OfferDetails": {
+        "NpcName": "Sten",
+        "DialogueText": "Oh, it’s you again...#$b#Is there no one else that you can go bother?$2#$b#Since you’re here I want you to do another errand for me. Get mead for me."
+      },
+      "When": {
+        "not:HasActiveQuest": "sten_underpants@HauntedPineapple.StendewValley_Quests",
+        "FriendshipLevel": "Sten 5",
+        "QuestNeverCompleted": "yes"
+      }
+    },
+    {
+      "QuestName": "getItemFromSten",
+      "OfferedBy": "NPC",
+      "OfferDetails": {
+        "NpcName": "Sten",
+        "DialogueText": "Dude, I'm trying to play my game, why can't you just leave me alone?$2#$b#Come back later and I'll probably have something else for you to do."
+      },
+      "When": {
+        "not:HasActiveQuest": "sten_mead@HauntedPineapple.StendewValley_Quests",
+        "FriendshipLevel": "Sten 6",
+        "QuestNeverCompleted": "yes"
+      }
+    }
+  ]
+}
