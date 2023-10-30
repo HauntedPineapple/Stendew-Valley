@@ -5,7 +5,16 @@
     {
       "Name": "Custom_MainIsland",
       "FromMapFile": "MapAssets/MainIsland.tmx"
+    },
+    {
+      "Name": "Custom_MainIslandCave",
+      "FromMapFile": "MapAssets/MainIslandCave.tmx"
+    },
+    {
+      "Name": "Custom_StenHouse",
+      "FromMapFile": "MapAssets/StenHouse.tmx"
     }
+
   ],
 
   "Changes": [

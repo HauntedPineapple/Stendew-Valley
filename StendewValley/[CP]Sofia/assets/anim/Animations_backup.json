@@ -1,0 +1,11 @@
+{
+  "Changes": [
+    {
+      "Action": "EditData",
+      "Target": "Data/animationDescriptions",
+      "Entries": {
+        "stand_forward": "0 0 0 0 0 0/0 0 0 0 0 0/0 0 0 0 0 0"
+      }
+    }
+  ]
+}
