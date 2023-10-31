@@ -19,7 +19,7 @@
       "Description": "Now that you have arrived on the mystery island, you should probably find whoever owns this place.",
       "Objective": "Talk to the owner of the island",
       "Trigger": "Sten",
-      "ReactionText": "Who are you? What are you doing on my island?$2#$b# Oh... Honestly, I didn't think anyone would take that letter seriously, I send it to people every year to fuck with them and they usually ignore me.#$b# Since you're here and want the item, you have to do some small tasks for me first."
+      "ReactionText": "Who are you? What are you doing on my island?$2#$b#Oh... Honestly, I didn't think anyone would take that letter seriously, I send it to people every year to fuck with them and they usually ignore me.#$b# Since you're here and want the item, you have to do some small tasks for me first."
     },
     {
       "Name": "sten_slimes",
@@ -55,7 +55,7 @@
       "Description": "Sten wants fiber for some reason. Might as well give it to him.",
       "Objective": "Bring Sten 10 fiber",
       "Trigger": "Sten 771 10",
-      "ReactionText": "Wait, did you actually bring me fiber? #$b# You know when I said I wanted 'fiber', I obviously meant I wanted you to bring me weed, not weeds you found in your backyard! I thought the air quotations gave it away.#$3#",
+      "ReactionText": "Wait, did you actually bring me real fiber? #$b# You know when I said I wanted 'fiber', I obviously meant I wanted you to bring me weed, not weeds you found in your backyard! #$b#I thought the air quotations gave it away. Ugh, fine whatever. Come back later, I'll find something else for you to do.",
       "FriendshipGain": {
         "Sten": 150
       }
