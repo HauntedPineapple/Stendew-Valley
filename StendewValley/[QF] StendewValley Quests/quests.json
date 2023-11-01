@@ -93,13 +93,14 @@
       "Title": "Talk to Sten",
       "Objective": "Talk to Sten later to get the next quest.",
       "Trigger": "Sten",
-      "ReactionText": "Well, as nice as the free labor is, I’m starting to get bored of you.#$b#I want to go back to installing Skyrim mods, so let’s do a trade: I’ll give you the item and you leave me the fuck alone.",
+      "ReactionText": "Well, as nice as the free labor is, I’m starting to get bored of you.#$b#I want to go back to installing Skyrim mods, so let’s do a trade: I’ll give you the item and you leave me the fuck alone.#$b#First I have to find it in this fucking mess of a house. I'll mail it once I find it.",
       "ConversationTopic": {
         "AddWhenQuestCompleted": "AllQuestsCompleted 10"
       },
-      "Reward": "Chocolate Cake", //placeholder item for now
-      "RewardType": "Object",
-      "RewardAmount": 1
+      // "Reward": "Chocolate Cake", //placeholder item for now
+      // "RewardType": "Object",
+      // "RewardAmount": 1,
+      "AddMailOnComplete":"FinalCompletionMail"
     }
   ],
   "Offers": [
@@ -188,7 +189,7 @@
       },
       "When": {
         "not:HasActiveQuest": "sten_mead@HauntedPineapple.StendewValley_Quests",
-        "FriendshipLevel": "Sten 6",
+        "FriendshipLevel": "Sten 7",
         "QuestNeverCompleted": "yes"
       }
     }
