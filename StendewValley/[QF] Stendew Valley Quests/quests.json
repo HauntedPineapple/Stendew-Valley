@@ -19,7 +19,7 @@
       "Description": "Now that you have arrived on the mystery island, you should probably find whoever owns this place.",
       "Objective": "Talk to the owner of the island",
       "Trigger": "Sten",
-      "ReactionText": "Who are you? What are you doing on my island?$2#$b#Oh... Honestly, I didn't think anyone would take that letter seriously, I send it to people every year to fuck with them and they usually ignore me.#$b# Since you're here and want the item, you have to do some small tasks for me first."
+      "ReactionText": "Who are you? What are you doing on my island?$2#$b#Oh... Honestly, I didn't think anyone would take that letter seriously.#$b#I send it to people every year to fuck with them and they usually ignore me.#$b#Since you're here and want the item, you have to do some small tasks for me first."
     },
     {
       "Name": "sten_slimes",
@@ -28,7 +28,7 @@
       "Description": "----", //     "Description": "Sten wants you to kill the slimes in his house in order to rescue his mods drive.",
       "Objective": "----", //     "Objective": "Kill 5 slimes.",
       "Trigger": "Sten 388", //     "Trigger": "Green_Slime 5 Sten",
-      "ReactionText": "Hey! This has some scratches on it! Did you accidentally hit my drive when killing the slimes? Watch where you wave your sword around, dude!$2#$b# ...Complete some more errands for me and I’ll think about whether I feel like telling you where the item is then.#$0#",
+      "ReactionText": "Hey! This has some scratches on it!#$b#Did you accidentally hit my drive when killing the slimes? Watch where you wave your sword around, dude!$2#$b#...#$b#Complete some more errands for me and I’ll think about whether I feel like telling you where the item is then.#$0#",
       "FriendshipGain": {
         "Sten": 150
       },
@@ -43,7 +43,7 @@
       "Title": "Bring Sten an Amethyst",
       "Objective": "Sten wants an amethyst, bring him one.",
       "Trigger": "Sten 66",
-      "ReactionText": "Hmmm...#$b#This shit SUCKS!$2#$b# Why the fuck does Abigail eat these?! I wanted to know why she likes eating them so much, but I regret even asking for this.$2#$b#I’d say thanks, but I think I just broke my tooth.$2#$b#Well I don’t feel particularly happy, which doesn’t bode well for you. I’m feeling kind though, so I’ll let you make it up to me by giving you another quest.",
+      "ReactionText": "Hmmm...#$b#This shit SUCKS!$2#$b# Why the fuck does Abigail eat these?! I wanted to know why she likes eating them so much, but I regret even asking for this.$2#$b#I’d say thanks, but I think I just broke my tooth.$2#$b#Well, I don’t feel particularly happy, which doesn’t bode well for you.#$b#I’m feeling kind though, so I’ll let you make it up to me by giving you another quest.",
       "FriendshipGain": {
         "Sten": 150
       }
@@ -55,7 +55,7 @@
       "Description": "Sten wants fiber for some reason. Might as well give it to him.",
       "Objective": "Bring Sten 10 fiber",
       "Trigger": "Sten 771 10",
-      "ReactionText": "Wait, did you actually bring me real fiber? #$b# You know when I said I wanted 'fiber', I obviously meant I wanted you to bring me weed, not weeds you found in your backyard! #$b#I thought the air quotations gave it away. Ugh, fine whatever. Come back later, I'll find something else for you to do.",
+      "ReactionText": "Wait, did you actually bring me real fiber?#$b#You know when I said I wanted 'fiber', I obviously meant I wanted you to bring me weed, not weeds you found in your backyard!#$b#I thought the air quotations gave it away. Ugh, fine whatever. Come back later, I'll find something else for you to do.",
       "FriendshipGain": {
         "Sten": 150
       }
@@ -66,7 +66,7 @@
       "Title": "Mayor Lewis' 'Shorts'",
       "Objective": "Bring Sten Mayor Lewis' underpants",
       "Trigger": "Sten 789",
-      "ReactionText": "Oh wow, you know I didn’t think you had the guts to actually do that to the mayor but you proved me wrong.#$1#",
+      "ReactionText": "Oh wow, you know I didn’t think you had the guts to actually do that to the mayor but I guess you proved me wrong.#$1#",
       "FriendshipGain": {
         "Sten": 150
       }
@@ -108,7 +108,7 @@
       "OfferedBy": "Mail",
       "OfferDetails": {
         "Topic": "Mysterious Item On Mysterious Island",
-        "Text": "Hello @.^I heard some rumors that there is an interesting item on a mysterious island nearby. I’ve arranged transportation for you on the beach by the tide pools. I would’ve gone to get the item myself, but I heard that there is a scary man that lives on the island.^  -Anonymous"
+        "Text": "Hello @.^I heard some rumors that there is an interesting item on a mysterious island nearby, and I'd like you to get it. I’ve arranged transportation for you on the beach by the tide pools. I would’ve gone to get the item myself, but I heard that there is a scary man that lives on the island.^  -Anonymous"
       },
       "When": {
         "Weather": "sunny",
