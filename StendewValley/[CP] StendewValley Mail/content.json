@@ -1,0 +1,13 @@
+{
+    "Format": "1.29.0",
+    "Changes": [
+        /*Adds custom mail*/
+        {
+            "Action": "EditData",
+            "Target": "Data/Mail",
+            "Entries": {
+                "FinalCompletionMail": "Here's your item, never bother me again. %item object 388 1%%[#]From Sten"
+            }
+        }
+    ]
+}
