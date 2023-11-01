@@ -2,12 +2,15 @@
   "Name": "StendewValley_Sten",
   "Author": "HauntedPineapple",
   "Description": "Adds in Sten's NPC",
-  "Version": "0.0.2",
+  "Version": "0.0.4",
   "UniqueID": "HauntedPineapple.StendewValley_Sten",
   "ContentPackFor": {
     "UniqueID": "Pathoschild.ContentPatcher"
   },
-  "UpdateKeys": [
-    "Nexus: "
-  ]
+  "Dependencies": [
+		{
+			"UniqueID": "HauntedPineapple.StendewValley_Locations"
+		}
+	],
+  "UpdateKeys": []
 }

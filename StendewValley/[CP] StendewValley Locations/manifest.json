@@ -1,14 +1,11 @@
 {
   "Name": "StendewValley_Locations",
   "Author": "HauntedPineapple",
-  "Version": "0.0.1",
+  "Version": "1.0.0",
   "Description": "Adds in the custom locations for Stendew Valley",
   "UniqueID": "HauntedPineapple.StendewValley_Locations",
   "ContentPackFor": {
     "UniqueID": "Pathoschild.ContentPatcher"
   },
-  "Dependencies": [
-  
-  ],
-  "UpdateKeys": [ "Nexus:???" ]
+  "UpdateKeys": []
 }
