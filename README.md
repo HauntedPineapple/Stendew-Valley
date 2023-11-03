@@ -9,3 +9,12 @@ Team: Jack Doyle, Audrey Main, Renee Mei, Sofia Rivas
 * [Modding Notes](https://docs.google.com/document/d/1vBRQ07ky8WCGWh4jQFbxmYEmaPnTfFR5X_xecvqqyfw/edit?usp=sharing)
 <!-- * [NAME](URL) -->
 <!-- * [Nexus Mod Page](URL) -->
+
+### Dependencies
+* [SMAPI](https://smapi.io/)
+* [Content Patcher](https://www.nexusmods.com/stardewvalley/mods/1915)
+* [Quest Framework](https://www.nexusmods.com/stardewvalley/mods/6414)
+* [Quest Essentials](https://www.nexusmods.com/stardewvalley/mods/8827)
+* [JSON Assets](https://www.nexusmods.com/stardewvalley/mods/1720)
+* [SpaceCore](https://www.nexusmods.com/stardewvalley/mods/1348)
+* [Expanded Precondition Utilities](https://www.nexusmods.com/stardewvalley/mods/6529)
