@@ -112,7 +112,7 @@
         "Text": "Hello @.^I heard some rumors that there is an interesting item on a mysterious island nearby, and I'd like you to get it. I’ve arranged transportation for you on the beach by the tide pools. I would’ve gone to get the item myself, but I heard that there is a scary man that lives on the island.^  -Anonymous"
       },
       "When": {
-        "Weather": "sunny",
+        "Weather": "sunny | rainy | snowy | stormy | cloudy",
         "QuestNeverCompleted": "yes"
       }
     },
