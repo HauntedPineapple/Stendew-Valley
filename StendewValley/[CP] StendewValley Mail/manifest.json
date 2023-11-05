@@ -7,5 +7,13 @@
     "ContentPackFor": {
         "UniqueID": "Pathoschild.ContentPatcher"
     },
+    "Dependencies": [
+        {
+            "UniqueID": "HauntedPineapple.StendewValley_Items"
+        },
+        {
+            "UniqueID": "spacechase0.JsonAssets"
+        }
+    ],
     "UpdateKeys": []
 }
