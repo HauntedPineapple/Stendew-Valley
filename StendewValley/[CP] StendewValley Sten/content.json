@@ -39,11 +39,6 @@
       "FromFile": "assets/dialogue/Dialogue.json"
     },
     {
-      "LogName": "Animation Frames",
-      "Action": "Include",
-      "FromFile": "assets/anim/Animations.json"
-    },
-    {
       "LogName": "Schedule Dialogue",
       "Action": "Load",
       "Target": "Strings/schedules/Sten",
