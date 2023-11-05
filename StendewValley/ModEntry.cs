@@ -18,8 +18,10 @@ namespace StendewValley
 
         // Name of the maps in Content Patcher
         private readonly string MAIN_ISLAND_NAME = "Custom_MainIsland";
+        private readonly string STEN_HOUSE_NAME = "Custom_StenHouse";
 
         private GameLocation mainIsland;
+        private GameLocation stenHouse;
 
         private CustomLargeObject test_boulder;
 
@@ -101,12 +103,25 @@ namespace StendewValley
         {
             // Set up the location variables
             mainIsland = GetGameLocationByName(MAIN_ISLAND_NAME);
+            stenHouse = GetGameLocationByName(STEN_HOUSE_NAME);
 
             // Set up the custom boulders
             InitializeCustomObjects();
 
             // Boulder follows menu option on initial load
             test_boulder.Enabled = Config.TestBoulderSpawn;
+
+            // If this is the first time loading the mod
+            if (Globals.Info.InitialLoad)
+            {
+                SpawnSlimesStenHouse();
+            }
+
+        }
+
+        private void SpawnSlimesStenHouse()
+        {
+
         }
 
 

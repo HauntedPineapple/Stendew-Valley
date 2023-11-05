@@ -9,5 +9,6 @@ namespace StendewValley
     internal class ModInfo
     {
         public bool monstersPeaceful { get; set; }
+        public bool InitialLoad { get; set; } = true;
     }
 }
