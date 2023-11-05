@@ -1,6 +1,6 @@
 {
     "Name": "Sten's Hard Drive", //The name you would like your object to have, this should be identical to the subfolder name.
-    "Description": "___", 
+    "Description": "The precious hard drive where Sten keeps his Skyrim mods.", 
     "Category": "Junk", 
     "Edibility": -300, 
     "CanSell": false,
