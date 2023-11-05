@@ -2,7 +2,7 @@
   "Name": "StendewValley_Sofia",
   "Author": "HauntedPineapple",
   "Description": "Adds in Sofia's NPC",
-  "Version": "0.0.1",
+  "Version": "0.0.3",
   "UniqueID": "HauntedPineapple.StendewValley_Sofia",
   "ContentPackFor": {
     "UniqueID": "Pathoschild.ContentPatcher"
