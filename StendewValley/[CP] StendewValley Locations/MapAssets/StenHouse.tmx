@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="left-down" width="21" height="21" tilewidth="16" tileheight="16" infinite="0" nextlayerid="11" nextobjectid="1">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="left-down" width="21" height="21" tilewidth="16" tileheight="16" infinite="0" nextlayerid="11" nextobjectid="24">
  <properties>
   <property name="Warp" value="9 19 Custom_MainIsland 60 43 10 19 Custom_MainIsland 60 43"/>
  </properties>
@@ -131,7 +131,83 @@
 </data>
  </layer>
  <objectgroup id="6" name="Back"/>
- <objectgroup id="7" name="Buildings"/>
+ <objectgroup id="7" name="Buildings">
+  <object id="3" name="TileData" x="64" y="80" width="16" height="16">
+   <properties>
+    <property name="Action" value="Dialogue Seems like someone left skyrim running."/>
+   </properties>
+  </object>
+  <object id="4" name="TileData" x="272" y="96" width="16" height="16">
+   <properties>
+    <property name="Action" value="Dialogue This is Sten's bed. If the rest of this place looks like such a dumpster, you don't want to know when was the last time he washed his sheets."/>
+   </properties>
+  </object>
+  <object id="5" name="TileData" x="288" y="240" width="16" height="16">
+   <properties>
+    <property name="Actions" value="Dialogue Ew..."/>
+   </properties>
+  </object>
+  <object id="8" name="TileData" x="32" y="64" width="16" height="16">
+   <properties>
+    <property name="Action" value="Dialogue When was the last time Sten cleaned this place?"/>
+   </properties>
+  </object>
+  <object id="10" name="TileData" x="256" y="64" width="16" height="16">
+   <properties>
+    <property name="Action" value="Dialogue When was the last time that Sten cleaned this place?"/>
+   </properties>
+  </object>
+  <object id="11" name="TileData" x="96" y="80" width="16" height="16">
+   <properties>
+    <property name="Action" value="Dialogue Ew..."/>
+   </properties>
+  </object>
+  <object id="12" name="TileData" x="208" y="64" width="16" height="16">
+   <properties>
+    <property name="Action" value="Dialogue This bookcase contains an assortment of different manga."/>
+   </properties>
+  </object>
+  <object id="16" name="TileData" x="64" y="64" width="16" height="16">
+   <properties>
+    <property name="Action" value="Dialogue Seems like someone left skyrim running."/>
+   </properties>
+  </object>
+  <object id="17" name="TileData" x="224" y="64" width="16" height="16">
+   <properties>
+    <property name="Action" value="Dialogue This bookcase contains an assortment of different manga."/>
+   </properties>
+  </object>
+  <object id="18" name="TileData" x="208" y="48" width="16" height="16">
+   <properties>
+    <property name="Action" value="Dialogue This bookcase contains an assortment of different manga."/>
+   </properties>
+  </object>
+  <object id="19" name="TileData" x="224" y="48" width="16" height="16">
+   <properties>
+    <property name="Action" value="Dialogue This bookcase contains an assortment of different manga."/>
+   </properties>
+  </object>
+  <object id="20" name="TileData" x="272" y="80" width="16" height="16">
+   <properties>
+    <property name="Action" value="Dialogue This is Sten's bed. If the rest of this place looks like such a dumpster, you don't want to know when was the last time he washed his sheets."/>
+   </properties>
+  </object>
+  <object id="21" name="TileData" x="272" y="64" width="16" height="16">
+   <properties>
+    <property name="Action" value="Dialogue This is Sten's bed. If the rest of this place looks like such a dumpster, you don't want to know when was the last time he washed his sheets."/>
+   </properties>
+  </object>
+  <object id="22" name="TileData" x="288" y="96" width="16" height="16">
+   <properties>
+    <property name="Action" value="Dialogue This is Sten's bed. If the rest of this place looks like such a dumpster, you don't want to know when was the last time he washed his sheets."/>
+   </properties>
+  </object>
+  <object id="23" name="TileData" x="288" y="80" width="16" height="16">
+   <properties>
+    <property name="Action" value="Dialogue This is Sten's bed. If the rest of this place looks like such a dumpster, you don't want to know when was the last time he washed his sheets."/>
+   </properties>
+  </object>
+ </objectgroup>
  <objectgroup id="8" name="Paths"/>
  <objectgroup id="9" name="Front"/>
  <objectgroup id="10" name="AlwaysFront"/>
