@@ -14,6 +14,18 @@
       "UniqueID": "PurrplingCat.QuestFramework"
     },
     {
+      "UniqueID": "spacechase0.JsonAssets"
+    },
+    {
+      "UniqueID": "Cherry.ExpandedPreconditionsUtility"
+    },
+    {
+      "UniqueID": "spacechase0.SpaceCore"
+    },
+    {
+      "UniqueID": "Pathoschild.ContentPatcher"
+    },
+    {
       "UniqueID": "HauntedPineapple.StendewValley_Mail"
     },
     {
@@ -29,16 +41,7 @@
       "UniqueID": "HauntedPineapple.StendewValley_Items"
     },
     {
-      "UniqueID": "spacechase0.JsonAssets"
-    },
-    {
-      "UniqueID": "Cherry.ExpandedPreconditionsUtility"
-    },
-    {
-      "UniqueID": "spacechase0.SpaceCore"
-    },
-    {
-      "UniqueID": "Pathoschild.ContentPatcher"
+      "UniqueID": "HauntedPineapple.StendewValley_Quests"
     }
   ],
   "UpdateKeys": [ "Nexus:???" ]
