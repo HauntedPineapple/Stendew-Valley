@@ -8,6 +8,7 @@ using StardewModdingAPI.Events;
 using StardewModdingAPI.Utilities;
 using StardewValley;
 using StardewValley.Monsters;
+using StardewValley.SDKs;
 
 namespace StendewValley
 {
@@ -19,9 +20,13 @@ namespace StendewValley
         // Name of the maps in Content Patcher
         private readonly string MAIN_ISLAND_NAME = "Custom_MainIsland";
         private readonly string STEN_HOUSE_NAME = "Custom_StenHouse";
+        private readonly string MAIN_ISLAND_CAVE_NAME = "Custom_MainIslandCave";
 
         private GameLocation mainIsland;
         private GameLocation stenHouse;
+        private GameLocation mainIslandCave;
+
+        List<Rectangle> stenHouseZones = new List<Rectangle>();
 
         private CustomLargeObject test_boulder;
 
@@ -39,7 +44,11 @@ namespace StendewValley
             Config = this.Helper.ReadConfig<ModConfig>();
 
             Helper.Events.GameLoop.GameLaunched += GameLoop_GameLaunched;
-            helper.Events.GameLoop.SaveLoaded += OnSaveLoaded;
+            Helper.Events.GameLoop.SaveLoaded += OnSaveLoaded;
+            Helper.Events.GameLoop.DayStarted += GameLoop_DayStarted;
+
+            stenHouseZones.Add(new Rectangle(7, 5, 9, 3));
+            stenHouseZones.Add(new Rectangle(6, 14, 5, 4));
 
             // Set the intial ModInfo variable states
             Globals.Info.monstersPeaceful = true;
@@ -96,6 +105,36 @@ namespace StendewValley
                     getValue: () => Config.TestBoulderSpawn,
                     setValue: value => { Config.TestBoulderSpawn = value; test_boulder.Enabled = value; }
                 );
+                configMenu.AddNumberOption(
+                    mod: ModManifest,
+                    name: () => "Min Slimes Per Day",
+                    getValue: () => Config.MinSlimesPerDay,
+                    setValue: value => Config.MinSlimesPerDay = value
+                );
+                configMenu.AddNumberOption(
+                    mod: ModManifest,
+                    name: () => "Max Slimes Per Day",
+                    getValue: () => Config.MaxSlimesPerDay,
+                    setValue: value => Config.MaxSlimesPerDay = value
+                );
+                configMenu.AddNumberOption(
+                    mod: ModManifest,
+                    name: () => "Max Total Slimes Cave",
+                    getValue: () => Config.MaxTotalSlimesCave,
+                    setValue: value => Config.MaxTotalSlimesCave = value
+                );
+                configMenu.AddNumberOption(
+                    mod: ModManifest,
+                    name: () => "Max Total Slimes Cave",
+                    getValue: () => Config.MaxTotalSlimesCave,
+                    setValue: value => Config.MaxTotalSlimesCave = value
+                );
+                configMenu.AddNumberOption(
+                    mod: ModManifest,
+                    name: () => "Max Total Slimes Sten's House",
+                    getValue: () => Config.MaxTotalSlimesHouse,
+                    setValue: value => Config.MaxTotalSlimesHouse = value
+                );
             }
         }
 
@@ -104,6 +143,7 @@ namespace StendewValley
             // Set up the location variables
             mainIsland = GetGameLocationByName(MAIN_ISLAND_NAME);
             stenHouse = GetGameLocationByName(STEN_HOUSE_NAME);
+            mainIslandCave = GetGameLocationByName(MAIN_ISLAND_CAVE_NAME);
 
             // Set up the custom boulders
             InitializeCustomObjects();
@@ -111,19 +151,86 @@ namespace StendewValley
             // Boulder follows menu option on initial load
             test_boulder.Enabled = Config.TestBoulderSpawn;
 
-            // If this is the first time loading the mod
-            if (Globals.Info.InitialLoad)
+            // Spawn extra slimes
+            if (Config.MaxSlimesPerDay < Config.MinSlimesPerDay)
             {
-                SpawnSlimesStenHouse();
+                Config.MaxSlimesPerDay = Config.MinSlimesPerDay;
+                Helper.WriteConfig(Config);
             }
 
+            SpawnSlimesStenHouse();
+            SpawnSlimesCave();
+        }
+
+        private void GameLoop_DayStarted(object sender, DayStartedEventArgs e)
+        {
+            if (Config.MaxSlimesPerDay < Config.MinSlimesPerDay)
+            {
+                Config.MaxSlimesPerDay = Config.MinSlimesPerDay;
+                Helper.WriteConfig(Config);
+            }
+
+            SpawnSlimesStenHouse();
+            SpawnSlimesCave();
         }
 
         private void SpawnSlimesStenHouse()
         {
-
+            int existing = 0;
+            if (stenHouse.characters.Count > 0)
+            {
+                // Looping backwards through list
+                for (int i = stenHouse.characters.Count - 1; i >= 0; i--)
+                {
+                    // Increment existing for every slime
+                    if (stenHouse.characters[i] is Monster)
+                        existing++;
+                }
+            }
+            int amount = Math.Min(Config.MaxTotalSlimesCave - existing, Game1.random.Next(Config.MinSlimesPerDay, Config.MaxSlimesPerDay + 1));
+            if (amount <= 0)
+                return;
+            List<Vector2> used = new();
+            for (int i = 0; i < amount; i++)
+            {
+                Rectangle rect = stenHouseZones[Game1.random.Next(stenHouseZones.Count)];
+                Vector2 pos = new Vector2(rect.X + Game1.random.Next(rect.Width), rect.Y + Game1.random.Next(rect.Height)) * 64;
+                if (used.Contains(pos))
+                    continue;
+                Monster m = new GreenSlime(pos, 0);
+                this.Monitor.Log("Added slime to Sten's House", LogLevel.Debug);
+                stenHouse.characters.Add(m);
+                used.Add(pos);
+            }
         }
 
+        private void SpawnSlimesCave()
+        {
+            int existing = 0;
+            if (mainIslandCave.characters.Count > 0)
+            {
+                // Looping backwards through list
+                for (int i = mainIslandCave.characters.Count - 1; i >= 0; i--)
+                {
+                    // Increment existing for every slime
+                    if (mainIslandCave.characters[i] is Monster)
+                        existing++;
+                }
+            }
+            int amount = Math.Min(Config.MaxTotalSlimesCave - existing, Game1.random.Next(Config.MinSlimesPerDay, Config.MaxSlimesPerDay + 1));
+            if (amount <= 0)
+                return;
+            List<Vector2> used = new();
+            for (int i = 0; i < amount; i++)
+            {
+                Vector2 pos = new Vector2(6 + Game1.random.Next(14), 6 + Game1.random.Next(16)) * 64;
+                if (used.Contains(pos))
+                    continue;
+                Monster m = new GreenSlime(pos, 0);
+                mainIslandCave.characters.Add(m);
+                used.Add(pos);
+            }
+        }
 
         /// <summary>Raised after the player presses a button on the keyboard, controller, or mouse.</summary>
         /// <param name="sender">The event sender.</param>
