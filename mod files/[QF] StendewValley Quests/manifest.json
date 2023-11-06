@@ -1,0 +1,33 @@
+{
+    "Name": "StendewValley_Quests",
+    "Author": "HauntedPineapple",
+    "Version": "0.0.6",
+    "Description": "Quests for Stendew Valley",
+    "UniqueID": "HauntedPineapple.StendewValley_Quests",
+    "MinimumApiVersion": "3.6.0",
+    "ContentPackFor": {
+        "UniqueID": "PurrplingCat.QuestFramework",
+        "MinimumVersion": "1.4.0"
+    },
+    "Dependencies": [
+        {
+            "UniqueID": "PurrplingCat.QuestEssentials"
+        },
+        {
+            "UniqueID": "HauntedPineapple.StendewValley_Mail"
+        },
+        {
+            "UniqueID": "HauntedPineapple.StendewValley_Sten"
+        },
+        {
+            "UniqueID": "HauntedPineapple.StendewValley_Locations"
+        },
+        {
+            "UniqueID": "HauntedPineapple.StendewValley_Items"
+        },
+        {
+            "UniqueID": "spacechase0.JsonAssets"
+        }
+    ],
+    "UpdateKeys": []
+}

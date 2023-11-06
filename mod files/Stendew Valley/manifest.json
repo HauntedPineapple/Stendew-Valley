@@ -1,0 +1,48 @@
+{
+  "Name": "Stendew Valley",
+  "Author": "Haunted Pineapple",
+  "Version": "1.0.0",
+  "Description": "<description goes here>",
+  "UniqueID": "HauntedPineapple.StendewValley",
+  "EntryDll": "StendewValley.dll",
+  "MinimumApiVersion": "3.0.0",
+  "Dependencies": [
+    {
+      "UniqueID": "PurrplingCat.QuestEssentials"
+    },
+    {
+      "UniqueID": "PurrplingCat.QuestFramework"
+    },
+    {
+      "UniqueID": "spacechase0.JsonAssets"
+    },
+    {
+      "UniqueID": "Cherry.ExpandedPreconditionsUtility"
+    },
+    {
+      "UniqueID": "spacechase0.SpaceCore"
+    },
+    {
+      "UniqueID": "Pathoschild.ContentPatcher"
+    },
+    {
+      "UniqueID": "HauntedPineapple.StendewValley_Mail"
+    },
+    {
+      "UniqueID": "HauntedPineapple.StendewValley_Sten"
+    },
+    {
+      "UniqueID": "HauntedPineapple.StendewValley_Sofia"
+    },
+    {
+      "UniqueID": "HauntedPineapple.StendewValley_Locations"
+    },
+    {
+      "UniqueID": "HauntedPineapple.StendewValley_Items"
+    },
+    {
+      "UniqueID": "HauntedPineapple.StendewValley_Quests"
+    }
+  ],
+  "UpdateKeys": [ "Nexus:???" ]
+}
