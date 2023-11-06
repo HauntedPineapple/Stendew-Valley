@@ -23,11 +23,11 @@
     },
     {
       "Name": "sten_slimes",
-      "Type": "Location", // "Type": "Monster",
-      "Title": "Go Inside Sten's House", //"Title": "Kill Slimes In Sten's House",
-      "Description": "---", //"Description": "Sten wants you to kill the slimes in his house in order to rescue his mods drive."
-      "Objective": "---", //"Objective": "Kill 5 slimes.",
-      "Trigger": "Custom_StenHouse", //  "Trigger": "Green_Slime 5 Sten",
+      "Type": "Monster",
+      "Title": "Kill Slimes In Sten's House",
+      "Description": "Sten wants you to kill the slimes in his house in order to rescue his mods drive.",
+      "Objective": "Kill the slimes.",
+      "Trigger": "Green_Slime 3",
       "NextQuests": [
         "sten_drive"
       ],
@@ -36,7 +36,7 @@
       "RewardAmount": 1
       // "ConversationTopic": {
       //   "AddWhenQuestAccepted": "StenSlimesHint 100",
-      //   "RemoveWhenQuestCompleted": "StenSlimesHint 100"
+      //   "RemoveWhenQuestCompleted": "StenSlimesHint"
       // }
     },
     {
@@ -139,7 +139,7 @@
       "OfferedBy": "NPC",
       "OfferDetails": {
         "NpcName": "Sten",
-        "DialogueText": "First task I want you to do is to save my precious Skyrim mods drive from the slimes in my house. #$b#Don't look at me like that.#$b#I know what you're thinking: 'Sten, do you not clean your house? I’ve heard slimes only live in cave-like or gross environments.'#$b#But that’s none of your concern. Just save the drive and I’ll think about giving you the item.#$b# FOR PLAYTESTING REASONS, YOU ONLY NEED TO GO INSIDE STEN'S HOUSE. CHECK YOUR JOURNAL."
+        "DialogueText": "First task I want you to do is to save my precious Skyrim mods drive from the slimes in my house. #$b#Don't look at me like that.#$b#I know what you're thinking: 'Sten, do you not clean your house? I’ve heard slimes only live in cave-like or gross environments.'#$b#But that’s none of your concern. Just save the drive and I’ll think about giving you the item."
       },
       "When": {
         "not:HasActiveQuest": "talk_to_sten@HauntedPineapple.StendewValley_Quests | go_to_island@HauntedPineapple.StendewValley_Quests",
