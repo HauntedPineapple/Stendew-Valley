@@ -1,7 +1,0 @@
-{
-	"Name": "Bald Cap", //The name you would like your hat to have, this should be identical to the subfolder name.
-	"Description": "Gives you invisibility to hostile mobs.",
-	"CanPurchase": false, 
-	"ShowHair": false, 
-	"IgnoreHairstyleOffset": true
-}
