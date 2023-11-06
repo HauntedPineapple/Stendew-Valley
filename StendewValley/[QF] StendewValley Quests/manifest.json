@@ -1,7 +1,7 @@
 {
     "Name": "StendewValley_Quests",
     "Author": "HauntedPineapple",
-    "Version": "0.0.5",
+    "Version": "0.0.6",
     "Description": "Quests for Stendew Valley",
     "UniqueID": "HauntedPineapple.StendewValley_Quests",
     "MinimumApiVersion": "3.6.0",
@@ -21,6 +21,12 @@
         },
         {
             "UniqueID": "HauntedPineapple.StendewValley_Locations"
+        },
+        {
+            "UniqueID": "HauntedPineapple.StendewValley_Items"
+        },
+        {
+            "UniqueID": "spacechase0.JsonAssets"
         }
     ],
     "UpdateKeys": []
