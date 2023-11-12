@@ -95,12 +95,6 @@ namespace StendewValley
                 // Add options
                 configMenu.AddBoolOption(
                     mod: ModManifest,
-                    name: () => "Peaceful Enemies",
-                    getValue: () => Config.PassiveMobs,
-                    setValue: value => Config.PassiveMobs = value
-                );
-                configMenu.AddBoolOption(
-                    mod: ModManifest,
                     name: () => "Spawn Boulder",
                     getValue: () => Config.TestBoulderSpawn,
                     setValue: value => { Config.TestBoulderSpawn = value; test_boulder.Enabled = value; }
@@ -160,6 +154,9 @@ namespace StendewValley
 
             SpawnSlimesStenHouse();
             SpawnSlimesCave();
+
+            // Hook up hat effect
+            Game1.player.hat.fieldChangeEvent += HatChanged;
         }
 
         private void GameLoop_DayStarted(object sender, DayStartedEventArgs e)
@@ -172,6 +169,9 @@ namespace StendewValley
 
             SpawnSlimesStenHouse();
             SpawnSlimesCave();
+
+            // Hat logic
+            ApplyHatEffect();
         }
 
         private void SpawnSlimesStenHouse()
@@ -299,6 +299,26 @@ namespace StendewValley
             temp.Spawn();
 
             test_boulder = temp;
+        }
+
+        private void ApplyHatEffect()
+        {
+            // Cleanup
+            this.Monitor.Log("Set passive mobs to false", LogLevel.Debug);
+            Config.PassiveMobs = false;
+
+            // Set effect if wearing the right hat
+            if (Game1.player.hat.Value != null && Game1.player.hat.Value.Name == "Bald Cap")
+            {
+                this.Monitor.Log("Bald Cap Equiped. Set passive mobs to true", LogLevel.Debug);
+                Config.PassiveMobs = true;
+            }
+        }
+
+        // Event to call when hat changes
+        public void HatChanged(Netcode.NetRef<StardewValley.Objects.Hat> field, StardewValley.Objects.Hat oldValue, StardewValley.Objects.Hat newValue)
+        {
+            ApplyHatEffect();
         }
     }
 }
