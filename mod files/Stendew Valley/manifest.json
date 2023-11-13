@@ -1,6 +1,6 @@
 {
   "Name": "Stendew Valley",
-  "Author": "HauntedPineapple",
+  "Author": "Haunted Pineapple",
   "Version": "1.0.0",
   "Description": "<description goes here>",
   "UniqueID": "HauntedPineapple.StendewValley",
@@ -24,9 +24,6 @@
     },
     {
       "UniqueID": "Pathoschild.ContentPatcher"
-    },
-    {
-      "UniqueID": "HauntedPineapple.StendewValley_Mail"
     },
     {
       "UniqueID": "HauntedPineapple.StendewValley_Sten"
