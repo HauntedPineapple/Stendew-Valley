@@ -230,7 +230,7 @@
       },
       "When": {
         "not:HasActiveQuest": "sten_underpants@HauntedPineapple.StendewValley_Quests | sten_drive@HauntedPineapple.StendewValley_Quests",
-        "FriendshipLevel": "Sten 5",
+        "FriendshipLevel": "Sten 6",
         "QuestNeverCompleted": "yes"
       }
     }
