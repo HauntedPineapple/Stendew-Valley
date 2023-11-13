@@ -61,7 +61,7 @@
       "Objective": "Bring Sten one amethyst",
       "Description": "Sten is curious about how amethyst tastes after a conversation with Abigail at the tavern. Get him an amethyst so he can sate his curiosity.",
       "Trigger": "Sten 66",
-      "ReactionText": "Hmmm.... This shit SUCKS! Why the fuck does Abigail eat these?!$2#$b#You should’ve told me this was a stupid idea, I think I just broke my tooth and it’s totally your fault.$2#$b#Well, I don’t feel particularly happy, which doesn’t bode well for you. But... I’m feeling kind, so I’ll let you make it up to me by giving you another task to do.",
+      "ReactionText": "Hmmm... This shit SUCKS! Why the fuck does Abigail eat these?!$2#$b#You should’ve told me this was a stupid idea, I think I just broke my tooth and it’s totally your fault.$2#$b#Well, I don’t feel particularly happy, which doesn’t bode well for you. But... I’m feeling kind, so I’ll let you make it up to me by giving you another task to do.",
       "FriendshipGain": {
         "Sten": 150
       },
