@@ -1,7 +1,7 @@
 {
     "Name": "StendewValley_Quests",
     "Author": "HauntedPineapple",
-    "Version": "0.0.6",
+    "Version": "1.0.0",
     "Description": "Quests for Stendew Valley",
     "UniqueID": "HauntedPineapple.StendewValley_Quests",
     "MinimumApiVersion": "3.6.0",
@@ -12,9 +12,6 @@
     "Dependencies": [
         {
             "UniqueID": "PurrplingCat.QuestEssentials"
-        },
-        {
-            "UniqueID": "HauntedPineapple.StendewValley_Mail"
         },
         {
             "UniqueID": "HauntedPineapple.StendewValley_Sten"
