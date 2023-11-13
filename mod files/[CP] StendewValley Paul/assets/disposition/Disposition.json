@@ -1,0 +1,11 @@
+{
+  "Changes": [
+    {
+      "Action": "EditData",
+      "Target": "data/NPCDispositions",
+      "Entries": {
+        "Paul": "adult/neutral/neutral/neutral/male/non-datable/null/Other/winter 1//Custom_MainIsland 61 63/Paul"
+      }
+    }
+  ]
+}
