@@ -175,7 +175,7 @@
       "OfferedBy": "NPC",
       "OfferDetails": {
         "NpcName": "Sten",
-        "DialogueText": "Okay, after a lot of deliberation, I think I know what I’m going to have you do.#$b#Here’s your first task, kid: save my precious Skyrim mods flash drive from the slimes in my house.#$b#…#$b#Don’t look at me like that.#$b#I know what you’re thinking: ‘Sten, do you not clean your house? Slimes only live in cave-like or gross environments.’#$b#Well, first of all, none of your fucking business, kid. Second of all, hasn’t anybody taught you it’s not nice to judge someone?$2#$b#Just save my flash drive, and I’ll think about giving you the item. Now get on with it."
+        "DialogueText": "Okay, after a lot of deliberation, I think I know what I’m going to have you do.#$b#Here’s your first task, kid: save my precious Skyrim mods flash drive from the slimes in my house.#$b#…#$b#Don’t look at me like that.#$b#I know what you’re thinking: 'Sten, do you not clean your house? Slimes only live in cave-like or gross environments.'#$b#Well, first of all, none of your fucking business, kid. Second of all, hasn’t anybody taught you it’s not nice to judge someone?$2#$b#Just save my flash drive, and I’ll think about giving you the item. Now get on with it."
       },
       "When": {
         "not:HasActiveQuest": "talk_to_sten@HauntedPineapple.StendewValley_Quests | go_to_island@HauntedPineapple.StendewValley_Quests",
