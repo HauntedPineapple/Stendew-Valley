@@ -155,6 +155,15 @@
       "ConversationTopic": {
         "AddWhenQuestCompleted": "AllQuestsCompleted 100"
       }
+    },
+    {
+      "Name": "moveBoulder",
+      "Type": "ItemDelivery",
+      "Title": "Bring Paul Wood",
+      "Objective": "Bring Paul The Monkey 10 wood",
+      "Description": "It seems that the boulder can be moved if we help the monkey.",
+      "Trigger": "Paul 388 10",
+      "ReactionText": "Ooh ooh ah ah."
     }
   ],
   "Offers": [
@@ -233,19 +242,17 @@
         "FriendshipLevel": "Sten 6",
         "QuestNeverCompleted": "yes"
       }
+    },
+    {
+      "QuestName": "moveBoulder",
+      "OfferedBy": "NPC",
+      "OfferDetails": {
+        "NpcName": "Paul",
+        "DialogueText": "ooh ooh ah ah door stuck#$b# ooh ooh ah ah can’t go in, no stick can hit door hard enough#$b# ooh ooh ah ah need more wood#$b# ooh ooh ah ah also sten loves me"
+      },
+      "When": {
+        "QuestNeverCompleted": "yes"
+      }
     }
-    // {
-    //   "QuestName": "getItemFromSten",
-    //   "OfferedBy": "NPC",
-    //   "OfferDetails": {
-    //     "NpcName": "Sten",
-    //     "DialogueText": ""
-    //   },
-    //   "When": {
-    //     "not:HasActiveQuest": "sten_mead@HauntedPineapple.StendewValley_Quests | sten_drive@HauntedPineapple.StendewValley_Quests",
-    //     "FriendshipLevel": "Sten 7",
-    //     "QuestNeverCompleted": "yes"
-    //   }
-    // }
   ]
 }
