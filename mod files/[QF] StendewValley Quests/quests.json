@@ -163,7 +163,8 @@
       "Objective": "Bring Paul The Monkey 10 wood",
       "Description": "It seems that the boulder can be moved if we help the monkey.",
       "Trigger": "Paul 388 10",
-      "ReactionText": "Ooh ooh ah ah."
+      "ReactionText": "Ooh ooh ah ah.",
+      "AddMailOnComplete": "Custom_PaulQuest_complete noletter"
     }
   ],
   "Offers": [

@@ -7,6 +7,7 @@ using StardewModdingAPI;
 using StardewModdingAPI.Events;
 using StardewModdingAPI.Utilities;
 using StardewValley;
+using StardewValley.Locations;
 using StardewValley.Monsters;
 using StardewValley.SDKs;
 
@@ -157,6 +158,9 @@ namespace StendewValley
 
             // Hook up hat effect
             Game1.player.hat.fieldChangeEvent += HatChanged;
+
+            // Boulder quest update
+            UpdateBoulderQuest();
         }
 
         private void GameLoop_DayStarted(object sender, DayStartedEventArgs e)
@@ -172,6 +176,9 @@ namespace StendewValley
 
             // Hat logic
             ApplyHatEffect();
+
+            // Boulder Quest update
+            UpdateBoulderQuest();
         }
 
         private void SpawnSlimesStenHouse()
@@ -241,6 +248,7 @@ namespace StendewValley
             if (!Context.IsWorldReady)
                 return;
 
+            UpdateBoulderQuest();
 
             // print button presses to the console window
             //this.Monitor.Log($"{Game1.player.Name} pressed {e.Button}.", LogLevel.Debug);
@@ -292,10 +300,10 @@ namespace StendewValley
         {
             // Test boulder
             CustomLargeObject temp = new CustomLargeObject("Test", true, mainIsland);
-            temp.SetSprite(58, 62, "Buildings", 17, 1);
-            temp.SetSprite(59, 62, "Buildings", 17, 1);
-            temp.SetSprite(58, 63, "Buildings", 17, 1);
-            temp.SetSprite(59, 63, "Buildings", 17, 1);
+            temp.SetSprite(58, 62, "Buildings", 898, 5);
+            temp.SetSprite(59, 62, "Buildings", 899, 5);
+            temp.SetSprite(58, 63, "Buildings", 923, 5);
+            temp.SetSprite(59, 63, "Buildings", 924, 5);
             temp.Spawn();
 
             test_boulder = temp;
@@ -319,6 +327,25 @@ namespace StendewValley
         public void HatChanged(Netcode.NetRef<StardewValley.Objects.Hat> field, StardewValley.Objects.Hat oldValue, StardewValley.Objects.Hat newValue)
         {
             ApplyHatEffect();
+        }
+
+        // Helper method to update the quest status for the boulder
+        private void UpdateBoulderQuest()
+        {
+            if (Game1.player.hasOrWillReceiveMail("Custom_PaulQuest_complete"))
+            {
+                test_boulder.Enabled = false;
+                Config.TestBoulderSpawn = false;
+
+                // this.Monitor.Log("Boulder removed", LogLevel.Debug);
+            }
+            else
+            {
+                test_boulder.Enabled = true;
+                Config.TestBoulderSpawn = true;
+
+                // this.Monitor.Log("Boulder spawned", LogLevel.Debug);
+            }
         }
     }
 }
