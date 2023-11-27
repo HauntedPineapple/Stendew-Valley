@@ -18,3 +18,5 @@ Team: Jack Doyle, Audrey Main, Renee Mei, Sofia Rivas
 * [JSON Assets](https://www.nexusmods.com/stardewvalley/mods/1720)
 * [SpaceCore](https://www.nexusmods.com/stardewvalley/mods/1348)
 * [Expanded Precondition Utilities](https://www.nexusmods.com/stardewvalley/mods/6529)
+
+![Stenkey](stenkey.png)
