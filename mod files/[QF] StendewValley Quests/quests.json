@@ -164,6 +164,10 @@
       "Description": "It seems that the boulder can be moved if we help the monkey.",
       "Trigger": "Paul 388 10",
       "ReactionText": "Ooh ooh ah ah.",
+      "ConversationTopic": {
+        "AddWhenQuestAccepted": "wood_topic1 100 wood_topic2 100",
+        "RemoveWhenQuestCompleted": "wood_topic1 wood_topic2"
+      },
       "AddMailOnComplete": "Custom_PaulQuest_complete noletter"
     }
   ],
