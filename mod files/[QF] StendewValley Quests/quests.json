@@ -19,7 +19,10 @@
       "Description": "Now that you have arrived on the mystery island, you should probably find whoever owns this place.",
       "Objective": "Talk to the owner of the island",
       "Trigger": "Sten",
-      "ReactionText": "Huh? Who the fuck are you and what are you doing on my island?$2#$b#Oh... A letter? Ha! Yeah, that makes sense.$1#$b#I send those out every year to fuck with everyone in town, but they usually ignore me.#$b#Honestly, I never thought anyone would actually take that letter seriously.#$b#Whatever, since you want the item and you're already here, you can do some small tasks for me.#$b#If I like you enough, I'll consider giving you the item. How does that sound?#$b#Now, give me a second, I have to think about what I want you to do..."
+      "ReactionText": "Huh? Who the fuck are you and what are you doing on my island?$2#$b#Oh... A letter? Ha! Yeah, that makes sense.$1#$b#I send those out every year to fuck with everyone in town, but they usually ignore me.#$b#Honestly, I never thought anyone would actually take that letter seriously.#$b#Whatever, since you want the item and you're already here, you can do some small tasks for me.#$b#If I like you enough, I'll consider giving you the item. How does that sound?#$b#Now, give me a second, I have to think about what I want you to do...",
+      "ConversationTopic": {
+        "AddWhenQuestAccepted": "Sofia_StenTA 10000 Sofia_Paul 10000"
+      }
     },
     {
       "Name": "sten_slimes",
@@ -35,7 +38,7 @@
       "RewardType": "Object",
       "RewardAmount": 1,
       "ConversationTopic": {
-        "AddWhenQuestAccepted": "slimes_topic1 100 slimes_topic2 100"
+        "AddWhenQuestAccepted": "slimes_topic1 1000 slimes_topic2 1000 Sofia_ItemTalk 10000"
       }
     },
     {
@@ -50,7 +53,7 @@
         "Sten": 150
       },
       "ConversationTopic": {
-        //"AddWhenQuestCompleted": "StenThinksYoureAnnoying_1 100 StenThinksYoureAnnoying_2 100",
+        "AddWhenQuestCompleted": "Sofia_Manga 10000",
         "RemoveWhenQuestCompleted": "slimes_topic1 slimes_topic2"
       }
     },
@@ -66,7 +69,7 @@
         "Sten": 150
       },
       "ConversationTopic": {
-        "AddWhenQuestAccepted": "amethyst_topic1 100 amethyst_topic2 100",
+        "AddWhenQuestAccepted": "amethyst_topic1 1000 amethyst_topic2 1000 Sofia_FunFact 10000",
         "RemoveWhenQuestCompleted": "amethyst_topic1 amethyst_topic2"
       }
     },
@@ -82,7 +85,7 @@
         "Sten": 150
       },
       "ConversationTopic": {
-        "AddWhenQuestAccepted": "fiber_topic 100",
+        "AddWhenQuestAccepted": "fiber_topic 100 Sofia_StenBanished 10000",
         "RemoveWhenQuestCompleted": "fiber_topic"
       }
     },
@@ -98,7 +101,7 @@
         "Sten": 150
       },
       "ConversationTopic": {
-        "AddWhenQuestAccepted": "underpants_topic 100",
+        "AddWhenQuestAccepted": "underpants_topic 1000",
         "RemoveWhenQuestCompleted": "underpants_topic"
       }
     },
@@ -117,7 +120,7 @@
         "getItemFromSten"
       ],
       "ConversationTopic": {
-        "AddWhenQuestAccepted": "mead_topic 100",
+        "AddWhenQuestAccepted": "mead_topic 1000",
         "RemoveWhenQuestCompleted": "mead_topic"
       }
     },
@@ -132,7 +135,7 @@
         "GetItem"
       ],
       "ConversationTopic": {
-        "AddWhenQuestAccepted": "StenIsPlayingSkyrim 10"
+        "AddWhenQuestAccepted": "StenIsPlayingSkyrim 100"
       }
     },
     {
