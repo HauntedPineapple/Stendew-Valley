@@ -141,7 +141,7 @@
     {
       "Name": "GetItem",
       "Type": "PurrplingCat.QuestEssentials/Adventure",
-      "Title": "Testing story quest",
+      "Title": "Get the Item",
       "Description": "You've completed all the tasks Sten asked you to do. This means... you're getting the item! Talk to Sten about getting it.",
       "Tasks": [
         {
