@@ -1,4 +1,10 @@
-﻿using StardewModdingAPI;
+﻿/// Project: Stendew Valley
+/// File: IGenericModConfigMenuApi.cs
+/// Description: Interface for a custom mod configuration menu accessible in game
+/// Source: https://www.nexusmods.com/stardewvalley/mods/5098
+/// Author: spacechase0
+
+using StardewModdingAPI;
 using System;
 using System.Collections.Generic;
 using System.Linq;
