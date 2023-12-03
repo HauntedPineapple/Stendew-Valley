@@ -16,6 +16,7 @@ namespace StendewValley
     /// <summary>The mod entry point</summary>
     internal sealed class ModEntry : Mod
     {
+        // Private mod configuration file
         private static ModConfig Config;
 
         // Name of the maps in Content Patcher
@@ -23,36 +24,33 @@ namespace StendewValley
         private readonly string STEN_HOUSE_NAME = "Custom_StenHouse";
         private readonly string MAIN_ISLAND_CAVE_NAME = "Custom_MainIslandCave";
 
+        // Custom Game Locations
         private GameLocation mainIsland;
         private GameLocation stenHouse;
         private GameLocation mainIslandCave;
 
+        // List of spawnable zones in stens house
         List<Rectangle> stenHouseZones = new List<Rectangle>();
 
-        private CustomLargeObject test_boulder;
+        // Boulder object
+        private CustomLargeObject boulder;
 
         #region Entry Method
         /// <summary>The mod entry point, called after the mod is first loaded.</summary>
         /// <param name="helper">Provides simplified APIs for writing mods.</param>
         public override void Entry(IModHelper helper)
         {
-            // Hook up Global Classes
-            Globals.Helper = this.Helper;           // Can be referenced by Globals.Helper
-            Globals.Monitor = this.Monitor;         // Can be referenced by Globals.Monitor.Log(...)
-            Globals.Manifest = this.ModManifest;    // Can be referenced by Globals.Manifest
-            Globals.Info = new ModInfo();           // Can be referenced by Globals.Info
-
+            // Set up ModConfig
             Config = this.Helper.ReadConfig<ModConfig>();
 
+            // Hook up events
             Helper.Events.GameLoop.GameLaunched += GameLoop_GameLaunched;
             Helper.Events.GameLoop.SaveLoaded += OnSaveLoaded;
             Helper.Events.GameLoop.DayStarted += GameLoop_DayStarted;
 
+            // Spawnable zones in stens house
             stenHouseZones.Add(new Rectangle(7, 5, 9, 3));
             stenHouseZones.Add(new Rectangle(6, 14, 5, 4));
-
-            // Set the intial ModInfo variable states
-            Globals.Info.monstersPeaceful = true;
 
             // Hook up button press event
             helper.Events.Input.ButtonPressed += this.OnButtonPressed;
@@ -84,7 +82,7 @@ namespace StendewValley
             var configMenu = Helper.ModRegistry.GetApi<IGenericModConfigMenuApi>("spacechase0.GenericModConfigMenu");
             if (configMenu is not null)
             {
-                this.Monitor.Log($"WE DID IT REDDIT!", LogLevel.Debug);
+                this.Monitor.Log($"Loaded Configurations Menu", LogLevel.Debug);
 
                 // register mod
                 configMenu.Register(
@@ -94,12 +92,6 @@ namespace StendewValley
                 );
 
                 // Add options
-                configMenu.AddBoolOption(
-                    mod: ModManifest,
-                    name: () => "Spawn Boulder",
-                    getValue: () => Config.TestBoulderSpawn,
-                    setValue: value => { Config.TestBoulderSpawn = value; test_boulder.Enabled = value; }
-                );
                 configMenu.AddNumberOption(
                     mod: ModManifest,
                     name: () => "Min Slimes Per Day",
@@ -111,12 +103,6 @@ namespace StendewValley
                     name: () => "Max Slimes Per Day",
                     getValue: () => Config.MaxSlimesPerDay,
                     setValue: value => Config.MaxSlimesPerDay = value
-                );
-                configMenu.AddNumberOption(
-                    mod: ModManifest,
-                    name: () => "Max Total Slimes Cave",
-                    getValue: () => Config.MaxTotalSlimesCave,
-                    setValue: value => Config.MaxTotalSlimesCave = value
                 );
                 configMenu.AddNumberOption(
                     mod: ModManifest,
@@ -141,10 +127,10 @@ namespace StendewValley
             mainIslandCave = GetGameLocationByName(MAIN_ISLAND_CAVE_NAME);
 
             // Set up the custom boulders
-            InitializeCustomObjects();
+            InitializeBoulder();
 
-            // Boulder follows menu option on initial load
-            test_boulder.Enabled = Config.TestBoulderSpawn;
+            // Boulder loaded initially
+            boulder.Enabled = true;
 
             // Spawn extra slimes
             if (Config.MaxSlimesPerDay < Config.MinSlimesPerDay)
@@ -153,14 +139,8 @@ namespace StendewValley
                 Helper.WriteConfig(Config);
             }
 
-            SpawnSlimesStenHouse();
-            SpawnSlimesCave();
-
             // Hook up hat effect
             Game1.player.hat.fieldChangeEvent += HatChanged;
-
-            // Boulder quest update
-            UpdateBoulderQuest();
         }
 
         private void GameLoop_DayStarted(object sender, DayStartedEventArgs e)
@@ -171,6 +151,7 @@ namespace StendewValley
                 Helper.WriteConfig(Config);
             }
 
+            // Spawn custom slimes
             SpawnSlimesStenHouse();
             SpawnSlimesCave();
 
@@ -248,13 +229,9 @@ namespace StendewValley
             if (!Context.IsWorldReady)
                 return;
 
+            // Check boulder quest
             UpdateBoulderQuest();
-
-            // print button presses to the console window
-            //this.Monitor.Log($"{Game1.player.Name} pressed {e.Button}.", LogLevel.Debug);
         }
-
-        // Monster methods
 
         /// <summary>
         /// Makes monsters passive when wearing the special item
@@ -264,7 +241,7 @@ namespace StendewValley
         /// <returns>True if continuing to base method, false if skipping it</returns>
         private static bool Monster_updateMovement_prefix(Monster __instance, GameTime time)
         {
-            if (Config.PassiveMobs && __instance.Health == __instance.MaxHealth)
+            if (Config.PassiveMobs)
             {
                 __instance.defaultMovementBehavior(time);
                 return false;
@@ -296,7 +273,7 @@ namespace StendewValley
                 " (has this method been called before OnSaveLoaded()?)");
         }
 
-        private void InitializeCustomObjects()
+        private void InitializeBoulder()
         {
             // Test boulder
             CustomLargeObject temp = new CustomLargeObject("Test", true, mainIsland);
@@ -306,19 +283,19 @@ namespace StendewValley
             temp.SetSprite(59, 63, "Buildings", 924, 5);
             temp.Spawn();
 
-            test_boulder = temp;
+            boulder = temp;
         }
 
         private void ApplyHatEffect()
         {
             // Cleanup
-            this.Monitor.Log("Set passive mobs to false", LogLevel.Debug);
+            this.Monitor.Log("Mods are not peaceful", LogLevel.Debug);
             Config.PassiveMobs = false;
 
             // Set effect if wearing the right hat
             if (Game1.player.hat.Value != null && Game1.player.hat.Value.Name == "Bald Cap")
             {
-                this.Monitor.Log("Bald Cap Equiped. Set passive mobs to true", LogLevel.Debug);
+                this.Monitor.Log("Bald Cap Equiped. Mobs are now peaceful", LogLevel.Debug);
                 Config.PassiveMobs = true;
             }
         }
@@ -334,16 +311,12 @@ namespace StendewValley
         {
             if (Game1.player.hasOrWillReceiveMail("Custom_PaulQuest_complete"))
             {
-                test_boulder.Enabled = false;
-                Config.TestBoulderSpawn = false;
-
+                boulder.Enabled = false;
                 // this.Monitor.Log("Boulder removed", LogLevel.Debug);
             }
             else
             {
-                test_boulder.Enabled = true;
-                Config.TestBoulderSpawn = true;
-
+                boulder.Enabled = true;
                 // this.Monitor.Log("Boulder spawned", LogLevel.Debug);
             }
         }

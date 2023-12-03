@@ -8,8 +8,7 @@ namespace StendewValley
 {
     class ModConfig
     {
-        public bool PassiveMobs { get; set; } = true;
-        public bool TestBoulderSpawn { get; set; } = true;
+        public bool PassiveMobs { get; set; }
         public int MinSlimesPerDay { get; set; } = 1;
         public int MaxSlimesPerDay { get; set; } = 3;
         public int MaxTotalSlimesHouse { get; set; } = 10;

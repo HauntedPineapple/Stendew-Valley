@@ -12,6 +12,5 @@ namespace StendewValley
         public static IManifest Manifest { get; set; }
         public static IModHelper Helper { get; set; }
         public static IMonitor Monitor { get; set; }
-        public static ModInfo Info { get; set; }
     }
 }
