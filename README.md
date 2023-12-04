@@ -19,4 +19,5 @@ Team: Jack Doyle, Audrey Main, Renee Mei, Sofia Rivas
 * [SpaceCore](https://www.nexusmods.com/stardewvalley/mods/1348)
 * [Expanded Precondition Utilities](https://www.nexusmods.com/stardewvalley/mods/6529)
 
-![Stenkey](stenkey.png)
+<!-- ![Stenkey](stenkey.png) -->
+![RIT logo](rit%20igm%20logo%20black.jpg)
