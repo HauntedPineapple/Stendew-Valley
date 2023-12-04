@@ -204,7 +204,7 @@
       "OfferedBy": "NPC",
       "OfferDetails": {
         "NpcName": "Sten",
-        "DialogueText": "Now, for your second task. You know that one girl from town... Abigail?#$b#I was sitting at the bar one day, and she told me something about herself that freaked me out.#$b#She eats rocks. Can you believe that? She even has a favorite one to eat!$3#$b#Amethyst...? Yeah, I think it was Amethyst.#$b#First thing I thought when she told me that was: 'Wow, this town is full of fucking weirdos.'#$b#The second thing I thought was: 'Can't a man just drink some mead in peace? Why is she telling me this shit?'#$b#The third thing I thought was..... 'Wait, what do rocks even taste like?'#$b#It's just weighing on me. I need to know, so your next task is to get me one amethyst."
+        "DialogueText": "Now, for your second task. You know that one girl from town... Abigail?#$b#I was sitting at the bar one day, and she told me something about herself that freaked me out.#$b#She eats rocks. Can you believe that? She even has a favorite one to eat!$3#$b#Amethyst...? Yeah, I think it was Amethyst.#$b#First thing I thought when she told me that was: 'Wow, this town is full of fucking weirdos.'#$b#The second thing I thought was: 'Can't a man just drink some mead in peace? Why is she telling me this shit?'#$b#The third thing I thought was... 'Wait, what do rocks even taste like?'#$b#It's just weighing on me. I need to know, so your next task is to get me one amethyst."
       },
       "When": {
         "not:HasActiveQuest": "sten_slimes@HauntedPineapple.StendewValley_Quests | sten_drive@HauntedPineapple.StendewValley_Quests",
