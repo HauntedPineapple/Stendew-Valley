@@ -1,5 +1,5 @@
 ﻿/// Project: Stendew Valley
-/// File: CustomLargeObjects
+/// File: CustomLargeObjects.cs
 /// Description: Holds class representing a multi tile object that can be spawned
 /// Author: Team Stendew Valley
 

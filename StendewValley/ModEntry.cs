@@ -1,5 +1,5 @@
 ﻿/// Project: Stendew Valley
-/// File: ModEntry
+/// File: ModEntry.cs
 /// Description: Entry file for the mod
 /// Author: Team Stendew Valley
 
