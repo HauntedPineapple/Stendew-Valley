@@ -14,16 +14,22 @@
             "UniqueID": "PurrplingCat.QuestEssentials"
         },
         {
+            "UniqueID": "spacechase0.JsonAssets"
+        },
+        {
             "UniqueID": "HauntedPineapple.StendewValley_Sten"
+        },
+        {
+            "UniqueID": "HauntedPineapple.StendewValley_Paul"
+        },
+        {
+            "UniqueID": "HauntedPineapple.StendewValley_Sofia"
         },
         {
             "UniqueID": "HauntedPineapple.StendewValley_Locations"
         },
         {
             "UniqueID": "HauntedPineapple.StendewValley_Items"
-        },
-        {
-            "UniqueID": "spacechase0.JsonAssets"
         }
     ],
     "UpdateKeys": []

@@ -8,9 +8,9 @@
     "UniqueID": "Pathoschild.ContentPatcher"
   },
   "Dependencies": [
-		{
-			"UniqueID": "HauntedPineapple.StendewValley_Locations"
-		}
-	],
+    {
+      "UniqueID": "HauntedPineapple.StendewValley_Locations"
+    }
+  ],
   "UpdateKeys": []
 }
