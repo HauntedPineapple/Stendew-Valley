@@ -1,0 +1,20 @@
+{
+  "Format": "1.24.0",
+  "Changes": [
+    {
+      "LogName": "Load Sten",
+      "Action": "Include",
+      "FromFile": "assets/sten_content.json"
+    },
+    {
+      "LogName": "Load Sofia",
+      "Action": "Include",
+      "FromFile": "assets/sofia_content.json"
+    },
+    {
+      "LogName": "Load Paul",
+      "Action": "Include",
+      "FromFile": "assets/paul_content.json"
+    }
+  ]
+}

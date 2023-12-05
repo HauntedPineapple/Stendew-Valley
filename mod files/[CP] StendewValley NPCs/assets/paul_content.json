@@ -2,47 +2,47 @@
   "Format": "1.21.0",
   "Changes": [
     {
-      "LogName": "NPC Manifestation",
+      "LogName": "Paul Manifestation",
       "Action": "Include",
-      "FromFile": "assets/disposition/Disposition.json"
+      "FromFile": "Paul/disposition/Disposition.json"
     },
     {
-      "LogName": "NPC Gift Tastes",
+      "LogName": "Paul Gift Tastes",
       "Action": "EditData",
-      "Target": "Data/NPCGiftTastes",
+      "Target": "Data/PaulGiftTastes",
       "Entries": {
         "Paul": "Oh wow this is amazing!  Thank you!//How nice of you, this is great.//Oh.. well it's the though that counts I guess.//Gross... You're Gross...//Thanks/ "
       }
     },
     {
-      "LogName": "NPC Sprite",
+      "LogName": "Paul Sprite",
       "Action": "Load",
       "Target": "Characters/Paul",
-      "FromFile": "assets/img/spritesheet.png"
+      "FromFile": "Paul/img/spritesheet.png"
     },
     {
-      "LogName": "NPC Portrait",
+      "LogName": "Paul Portrait",
       "Action": "Load",
       "Target": "Portraits/Paul",
-      "FromFile": "assets/img/portrait.png"
+      "FromFile": "Paul/img/portrait.png"
     },
     {
       "LogName": "Schedule",
       "Action": "Load",
       "Target": "Characters/schedules/Paul",
-      "FromFile": "assets/schedules/schedule.json"
+      "FromFile": "Paul/schedules/schedule.json"
     },
     {
       "LogName": "Dialogue",
       "Action": "Load",
       "Target": "Characters/Dialogue/Paul",
-      "FromFile": "assets/dialogue/Dialogue.json"
+      "FromFile": "Paul/dialogue/Dialogue.json"
     },
     {
       "LogName": "Schedule Dialogue",
       "Action": "Load",
       "Target": "Strings/schedules/Paul",
-      "FromFile": "assets/schedules/scheduleDialogue.json"
+      "FromFile": "Paul/schedules/scheduleDialogue.json"
     }
   ]
 }

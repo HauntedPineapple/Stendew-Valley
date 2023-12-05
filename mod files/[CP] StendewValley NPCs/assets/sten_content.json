@@ -2,47 +2,47 @@
   "Format": "1.21.0",
   "Changes": [
     {
-      "LogName": "NPC Manifestation",
+      "LogName": "Sten Manifestation",
       "Action": "Include",
-      "FromFile": "assets/disposition/Disposition.json"
+      "FromFile": "Sten/disposition/Disposition.json"
     },
     {
-      "LogName": "NPC Gift Tastes",
+      "LogName": "Sten Gift Tastes",
       "Action": "EditData",
-      "Target": "Data/NPCGiftTastes",
+      "Target": "Data/StenGiftTastes",
       "Entries": {
         "Sten": "Thanks.//Oh, this is pretty cool.//...What is this?//What the fuck is wrong with you?//Thanks/ "
       }
     },
     {
-      "LogName": "NPC Sprite",
+      "LogName": "Sten Sprite",
       "Action": "Load",
       "Target": "Characters/Sten",
-      "FromFile": "assets/img/spritesheet.png"
+      "FromFile": "Sten/img/spritesheet.png"
     },
     {
-      "LogName": "NPC Portrait",
+      "LogName": "Sten Portrait",
       "Action": "Load",
       "Target": "Portraits/Sten",
-      "FromFile": "assets/img/portrait.png"
+      "FromFile": "Sten/img/portrait.png"
     },
     {
       "LogName": "Schedule",
       "Action": "Load",
       "Target": "Characters/schedules/Sten",
-      "FromFile": "assets/schedules/schedule.json"
+      "FromFile": "Sten/schedules/schedule.json"
     },
     {
       "LogName": "Dialogue",
       "Action": "Load",
       "Target": "Characters/Dialogue/Sten",
-      "FromFile": "assets/dialogue/Dialogue.json"
+      "FromFile": "Sten/dialogue/Dialogue.json"
     },
     {
       "LogName": "Schedule Dialogue",
       "Action": "Load",
       "Target": "Strings/schedules/Sten",
-      "FromFile": "assets/schedules/scheduleDialogue.json"
+      "FromFile": "Sten/schedules/scheduleDialogue.json"
     }
   ]
 }

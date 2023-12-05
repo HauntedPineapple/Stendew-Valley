@@ -1,9 +1,9 @@
 {
-  "Name": "StendewValley_Sten",
+  "Name": "StendewValley_NPCs",
   "Author": "HauntedPineapple",
-  "Description": "Adds in Sten's NPC",
+  "Description": "Adds in NPCs for Stendew Valley",
   "Version": "1.0.0",
-  "UniqueID": "HauntedPineapple.StendewValley_Sten",
+  "UniqueID": "HauntedPineapple.StendewValley_NPCs",
   "ContentPackFor": {
     "UniqueID": "Pathoschild.ContentPatcher"
   },
