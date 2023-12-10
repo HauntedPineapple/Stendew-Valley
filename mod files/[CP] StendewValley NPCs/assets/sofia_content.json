@@ -1,10 +1,9 @@
 {
-  "Format": "1.21.0",
   "Changes": [
     {
       "LogName": "Sofia Manifestation",
       "Action": "Include",
-      "FromFile": "Sofia/disposition/Disposition.json"
+      "FromFile": "assets/Sofia/disposition/Disposition.json"
     },
     {
       "LogName": "Sofia Gift Tastes",
@@ -18,31 +17,31 @@
       "LogName": "Sofia Sprite",
       "Action": "Load",
       "Target": "Characters/Sofia",
-      "FromFile": "Sofia/img/spritesheet.png"
+      "FromFile": "assets/Sofia/img/spritesheet.png"
     },
     {
       "LogName": "Sofia Portrait",
       "Action": "Load",
       "Target": "Portraits/Sofia",
-      "FromFile": "Sofia/img/portrait.png"
+      "FromFile": "assets/Sofia/img/portrait.png"
     },
     {
       "LogName": "Schedule",
       "Action": "Load",
       "Target": "Characters/schedules/Sofia",
-      "FromFile": "Sofia/schedules/schedule.json"
+      "FromFile": "assets/Sofia/schedules/schedule.json"
     },
     {
       "LogName": "Dialogue",
       "Action": "Load",
       "Target": "Characters/Dialogue/Sofia",
-      "FromFile": "Sofia/dialogue/Dialogue.json"
+      "FromFile": "assets/Sofia/dialogue/Dialogue.json"
     },
     {
       "LogName": "Schedule Dialogue",
       "Action": "Load",
       "Target": "Strings/schedules/Sofia",
-      "FromFile": "Sofia/schedules/scheduleDialogue.json"
+      "FromFile": "assets/Sofia/schedules/scheduleDialogue.json"
     }
   ]
 }

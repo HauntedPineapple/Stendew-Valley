@@ -1,10 +1,9 @@
 {
-  "Format": "1.21.0",
   "Changes": [
     {
       "LogName": "Paul Manifestation",
       "Action": "Include",
-      "FromFile": "Paul/disposition/Disposition.json"
+      "FromFile": "assets/Paul/disposition/Disposition.json"
     },
     {
       "LogName": "Paul Gift Tastes",
@@ -18,31 +17,31 @@
       "LogName": "Paul Sprite",
       "Action": "Load",
       "Target": "Characters/Paul",
-      "FromFile": "Paul/img/spritesheet.png"
+      "FromFile": "assets/Paul/img/spritesheet.png"
     },
     {
       "LogName": "Paul Portrait",
       "Action": "Load",
       "Target": "Portraits/Paul",
-      "FromFile": "Paul/img/portrait.png"
+      "FromFile": "assets/Paul/img/portrait.png"
     },
     {
       "LogName": "Schedule",
       "Action": "Load",
       "Target": "Characters/schedules/Paul",
-      "FromFile": "Paul/schedules/schedule.json"
+      "FromFile": "assets/Paul/schedules/schedule.json"
     },
     {
       "LogName": "Dialogue",
       "Action": "Load",
       "Target": "Characters/Dialogue/Paul",
-      "FromFile": "Paul/dialogue/Dialogue.json"
+      "FromFile": "assets/Paul/dialogue/Dialogue.json"
     },
     {
       "LogName": "Schedule Dialogue",
       "Action": "Load",
       "Target": "Strings/schedules/Paul",
-      "FromFile": "Paul/schedules/scheduleDialogue.json"
+      "FromFile": "assets/Paul/schedules/scheduleDialogue.json"
     }
   ]
 }

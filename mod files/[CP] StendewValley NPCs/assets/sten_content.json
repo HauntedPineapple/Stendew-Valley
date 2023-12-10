@@ -1,10 +1,9 @@
 {
-  "Format": "1.21.0",
   "Changes": [
     {
       "LogName": "Sten Manifestation",
       "Action": "Include",
-      "FromFile": "Sten/disposition/Disposition.json"
+      "FromFile": "assets/Sten/disposition/Disposition.json"
     },
     {
       "LogName": "Sten Gift Tastes",
@@ -18,31 +17,31 @@
       "LogName": "Sten Sprite",
       "Action": "Load",
       "Target": "Characters/Sten",
-      "FromFile": "Sten/img/spritesheet.png"
+      "FromFile": "assets/Sten/img/spritesheet.png"
     },
     {
       "LogName": "Sten Portrait",
       "Action": "Load",
       "Target": "Portraits/Sten",
-      "FromFile": "Sten/img/portrait.png"
+      "FromFile": "assets/Sten/img/portrait.png"
     },
     {
       "LogName": "Schedule",
       "Action": "Load",
       "Target": "Characters/schedules/Sten",
-      "FromFile": "Sten/schedules/schedule.json"
+      "FromFile": "assets/Sten/schedules/schedule.json"
     },
     {
       "LogName": "Dialogue",
       "Action": "Load",
       "Target": "Characters/Dialogue/Sten",
-      "FromFile": "Sten/dialogue/Dialogue.json"
+      "FromFile": "assets/Sten/dialogue/Dialogue.json"
     },
     {
       "LogName": "Schedule Dialogue",
       "Action": "Load",
       "Target": "Strings/schedules/Sten",
-      "FromFile": "Sten/schedules/scheduleDialogue.json"
+      "FromFile": "assets/Sten/schedules/scheduleDialogue.json"
     }
   ]
 }
