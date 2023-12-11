@@ -1,7 +1,7 @@
 {
   "Name": "Stendew Valley",
   "Author": "Haunted Pineapple",
-  "Version": "1.0.0",
+  "Version": "1.0.1",
   "Description": "Stendew Valley SMAPI mod",
   "UniqueID": "HauntedPineapple.StendewValley",
   "EntryDll": "StendewValley.dll",
